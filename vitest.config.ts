@@ -30,6 +30,7 @@ export default defineConfig({
       "libs/jsonts/**/*.test.ts",
       "libs/subnet/**/*.test.ts",
       "libs/sqlformat/**/*.test.ts",
+      "libs/pdf-to-image/**/*.test.ts",
       "libs/recipe/**/*.test.ts",
       "libs/batch/**/*.test.ts",
       "libs/__tests__/*.test.ts",

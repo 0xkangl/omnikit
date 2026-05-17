@@ -49,6 +49,7 @@ import {
   Droplets,
   Stamp,
   FileImage,
+  ImageDown,
 } from "lucide-react";
 
 export interface ToolCard {
@@ -137,6 +138,7 @@ export const TOOL_CATEGORIES: CategoryGroup[] = [
       "image-crop",
       "image-rotate",
       "image-to-pdf",
+      "pdf-to-image",
       "pdf-merge",
       "pdf-split",
       "pdf-compress",
@@ -214,6 +216,7 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
     "pdf-compress",
     "image-watermark",
     "image-to-pdf",
+    "pdf-to-image",
   ],
   "image-convert": [
     "image-resize",
@@ -225,6 +228,7 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
     "pdf-compress",
     "image-watermark",
     "image-to-pdf",
+    "pdf-to-image",
   ],
   "image-rotate": [
     "image-resize",
@@ -253,7 +257,15 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
   subnet: ["numbase", "httpstatus", "ascii"],
   recipe: ["json", "base64", "hashing"],
   batch: ["recipe", "hashing", "base64", "image-resize", "image-compress"],
-  "image-to-pdf": ["image-resize", "image-compress", "image-convert", "pdf-merge"],
+  "image-to-pdf": ["image-resize", "image-compress", "image-convert", "pdf-merge", "pdf-to-image"],
+  "pdf-to-image": [
+    "image-compress",
+    "image-convert",
+    "image-resize",
+    "pdf-merge",
+    "pdf-split",
+    "image-to-pdf",
+  ],
   "pdf-merge": [
     "pdf-split",
     "pdf-compress",
@@ -262,8 +274,9 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
     "checksum",
     "pdf-watermark",
     "image-to-pdf",
+    "pdf-to-image",
   ],
-  "pdf-split": ["pdf-merge", "image-compress", "image-convert"],
+  "pdf-split": ["pdf-merge", "image-compress", "image-convert", "pdf-to-image"],
   "pdf-compress": ["pdf-merge", "image-compress", "checksum"],
   "pdf-watermark": ["image-watermark", "pdf-merge", "image-compress", "image-convert", "color"],
 };
@@ -564,6 +577,13 @@ export const TOOLS: ToolEntry[] = [
       "https://en.wikipedia.org/wiki/PDF",
       "https://developer.mozilla.org/en-US/docs/Glossary/PDF",
     ],
+  },
+  {
+    key: "pdf-to-image",
+    path: "/pdf-to-image",
+    icon: ImageDown,
+    emoji: "📄",
+    sameAs: ["https://www.adobe.com/acrobat/online/pdf-to-image.html"],
   },
 ];
 

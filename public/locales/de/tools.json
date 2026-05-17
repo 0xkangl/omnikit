@@ -255,6 +255,11 @@
     "shortTitle": "Bilder zu PDF",
     "description": "Wandeln Sie JPG-, PNG-, WebP- und GIF-Bilder in ein einziges PDF um. Mehrere Layout-Modi, Seitengrößen und Ränder. Alle Verarbeitung im Browser."
   },
+  "pdf-to-image": {
+    "title": "PDF zu Bild - PDF-Seiten als PNG, JPG, WebP konvertieren",
+    "shortTitle": "PDF zu Bild",
+    "description": "Konvertieren Sie PDF-Seiten in PNG-, JPG- oder WebP-Bilder mit DPI-Kontrolle. Seitenauswahl, Qualitätsanpassung, Einzel- oder ZIP-Download. Alles im Browser."
+  },
   "categories": {
     "text": "Textverarbeitung",
     "encoding": "Kodierung & Konvertierung",

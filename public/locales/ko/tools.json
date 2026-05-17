@@ -306,6 +306,12 @@
     "description": "JPG, PNG, WebP, GIF 이미지를 PDF로 변환합니다. 다양한 레이아웃, 페이지 크기, 여백 설정을 지원합니다. 모든 처리는 브라우저에서 이루어집니다.",
     "searchTerms": "imidzipdf izpdf pdf hapchi imiji"
   },
+  "pdf-to-image": {
+    "title": "PDF 이미지 변환 - PDF 페이지를 PNG, JPG, WebP로 변환",
+    "shortTitle": "PDF 이미지 변환",
+    "description": "PDF 페이지를 PNG, JPG, WebP 이미지로 변환합니다. DPI 조절, 페이지 선택, 개별 또는 ZIP 일괄 다운로드를 지원합니다. 모든 처리는 브라우저에서 실행됩니다.",
+    "searchTerms": "pdfimiji pfi imiji bunhwan"
+  },
   "categories": {
     "text": "텍스트 처리",
     "encoding": "인코딩 & 변환",
