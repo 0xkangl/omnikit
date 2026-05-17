@@ -255,6 +255,11 @@
     "shortTitle": "Images en PDF",
     "description": "Convertissez des images JPG, PNG, WebP et GIF en un seul PDF. Plusieurs modes de mise en page, tailles de page et marges. Tout le traitement dans votre navigateur."
   },
+  "pdf-to-image": {
+    "title": "PDF en Image - Convertir des pages PDF en PNG, JPG, WebP",
+    "shortTitle": "PDF en Image",
+    "description": "Convertissez des pages PDF en images PNG, JPG ou WebP avec contrôle DPI. Sélection de pages, réglage qualité, téléchargement individuel ou ZIP. Tout dans votre navigateur."
+  },
   "categories": {
     "text": "Traitement de texte",
     "encoding": "Encodage et conversion",
