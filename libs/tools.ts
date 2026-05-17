@@ -136,6 +136,7 @@ export const TOOL_CATEGORIES: CategoryGroup[] = [
       "image-rotate",
       "pdf-merge",
       "pdf-split",
+      "pdf-compress",
     ],
   },
   {
@@ -179,7 +180,7 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
   cipher: ["hashing", "base64", "password"],
   numbase: ["color", "storageunit", "ascii", "subnet"],
   dbviewer: ["csv", "json", "yaml", "sqlformat"],
-  checksum: ["hashing", "cipher", "pdf-merge"],
+  checksum: ["hashing", "cipher", "pdf-merge", "pdf-compress"],
   storageunit: ["numbase", "checksum", "cssunit"],
   httpstatus: ["httpclient", "urlencoder", "subnet"],
   yaml: ["json", "csv", "markdown", "jsonts"],
@@ -205,6 +206,7 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
     "image-rotate",
     "pdf-merge",
     "pdf-split",
+    "pdf-compress",
     "image-watermark",
   ],
   "image-convert": [
@@ -214,6 +216,7 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
     "image-rotate",
     "pdf-merge",
     "pdf-split",
+    "pdf-compress",
     "image-watermark",
   ],
   "image-rotate": [
@@ -242,8 +245,9 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
   subnet: ["numbase", "httpstatus", "ascii"],
   recipe: ["json", "base64", "hashing"],
   batch: ["recipe", "hashing", "base64", "image-resize", "image-compress"],
-  "pdf-merge": ["pdf-split", "image-compress", "image-convert", "checksum"],
+  "pdf-merge": ["pdf-split", "pdf-compress", "image-compress", "image-convert", "checksum"],
   "pdf-split": ["pdf-merge", "image-compress", "image-convert"],
+  "pdf-compress": ["pdf-merge", "image-compress", "checksum"],
 };
 
 const PALETTE_SIZE = 20;
@@ -508,6 +512,16 @@ export const TOOLS: ToolEntry[] = [
     icon: Scissors,
     emoji: "✂️",
     sameAs: ["https://www.adobe.com/acrobat/online/split-pdf.html"],
+  },
+  {
+    key: "pdf-compress",
+    path: "/pdf-compress",
+    icon: FileText,
+    emoji: "🗜️",
+    sameAs: [
+      "https://en.wikipedia.org/wiki/PDF",
+      "https://developer.mozilla.org/en-US/docs/Glossary/PDF",
+    ],
   },
   {
     key: "image-watermark",

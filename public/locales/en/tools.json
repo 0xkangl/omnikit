@@ -235,6 +235,11 @@
     "shortTitle": "PDF Split",
     "description": "Split a PDF into separate pages, custom ranges, or hand-picked selections. Thumbnail preview, ZIP download. All processing runs in your browser."
   },
+  "pdf-compress": {
+    "title": "PDF Compressor - Reduce PDF File Size Online",
+    "shortTitle": "PDF Compressor",
+    "description": "Compress PDF files with adjustable quality. Reduce file size while maintaining readability. All processing runs in your browser."
+  },
   "image-watermark": {
     "title": "Image Watermark - Add Text or Logo Watermark",
     "shortTitle": "Image Watermark",

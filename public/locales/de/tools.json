@@ -235,6 +235,11 @@
     "shortTitle": "PDF Aufteilen",
     "description": "Teilen Sie ein PDF in einzelne Seiten, benutzerdefinierte Bereiche oder Handauswahl auf. Vorschaubilder, ZIP-Download. Die gesamte Verarbeitung läuft in Ihrem Browser."
   },
+  "pdf-compress": {
+    "title": "PDF-Kompressor - PDF-Dateigröße Online Reduzieren",
+    "shortTitle": "PDF-Kompressor",
+    "description": "Komprimieren Sie PDF-Dateien mit einstellbarer Qualität. Reduzieren Sie die Dateigröße bei erhaltener Lesbarkeit. Die gesamte Verarbeitung erfolgt in Ihrem Browser."
+  },
   "image-watermark": {
     "title": "Bildwasserzeichen - Text oder Logo hinzufügen",
     "shortTitle": "Wasserzeichen",

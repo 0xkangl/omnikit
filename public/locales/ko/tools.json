@@ -282,6 +282,12 @@
     "description": "PDF를 개별 페이지, 사용자 정의 범위 또는 수동 선택으로 분할합니다. 썸네일 미리보기, ZIP 다운로드. 모든 처리는 브라우저에서 실행됩니다.",
     "searchTerms": "pdfbunhal pdfbh bunhal pdf"
   },
+  "pdf-compress": {
+    "title": "PDF 압축 - 온라인으로 PDF 파일 크기 줄이기",
+    "shortTitle": "PDF 압축",
+    "description": "품질 조절 가능한 PDF 압축 도구. 파일 크기를 줄이면서 가독성을 유지합니다. 모든 처리는 브라우저에서 이루어집니다.",
+    "searchTerms": "pdfapchukgi pdfak apchuk munseo"
+  },
   "image-watermark": {
     "title": "이미지 워터마크 - 텍스트 또는 로고 워터마크 추가",
     "shortTitle": "이미지 워터마크",

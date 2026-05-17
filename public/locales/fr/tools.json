@@ -235,6 +235,11 @@
     "shortTitle": "Découper PDF",
     "description": "Découpez un PDF en pages individuelles, plages personnalisées ou sélections manuelles. Aperçu des miniatures, téléchargement ZIP. Tout le traitement s'exécute dans votre navigateur."
   },
+  "pdf-compress": {
+    "title": "Compresseur PDF - Réduire la Taille du PDF en Ligne",
+    "shortTitle": "Compresseur PDF",
+    "description": "Compressez vos fichiers PDF avec une qualité réglable. Réduisez la taille tout en maintenant la lisibilité. Tout le traitement s'effectue dans votre navigateur."
+  },
   "image-watermark": {
     "title": "Filigrane - Ajouter un Texte ou Logo sur Image",
     "shortTitle": "Filigrane",

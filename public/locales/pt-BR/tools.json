@@ -235,6 +235,11 @@
     "shortTitle": "Dividir PDF",
     "description": "Divida um PDF em páginas individuais, intervalos personalizados ou seleções manuais. Pré-visualização de miniaturas, download em ZIP. Todo o processamento é feito no seu navegador."
   },
+  "pdf-compress": {
+    "title": "Compressor de PDF - Reduza o Tamanho do PDF Online",
+    "shortTitle": "Compressor de PDF",
+    "description": "Comprima arquivos PDF com qualidade ajustável. Reduza o tamanho mantendo a legibilidade. Todo o processamento é feito no seu navegador."
+  },
   "image-watermark": {
     "title": "Marca d'Água - Adicionar Texto ou Logo",
     "shortTitle": "Marca d'Água",

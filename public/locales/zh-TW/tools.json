@@ -282,6 +282,12 @@
     "description": "將 PDF 拆分為單獨頁面、自訂範圍或手動選擇。縮圖預覽、ZIP 下載。所有處理在瀏覽器本機完成。",
     "searchTerms": "pdfchaifen pdfcf chafen fenye"
   },
+  "pdf-compress": {
+    "title": "PDF 壓縮 - 線上減小 PDF 檔案大小",
+    "shortTitle": "PDF 壓縮",
+    "description": "可調品質的 PDF 壓縮工具，在減小檔案大小的同時保持可讀性。所有處理在瀏覽器本機完成。",
+    "searchTerms": "pdfyasuoqi pdfysq yasuo wendang tuxiang"
+  },
   "image-watermark": {
     "title": "圖片浮水印 - 新增文字或 Logo 浮水印",
     "shortTitle": "圖片浮水印",

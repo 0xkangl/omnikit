@@ -282,6 +282,12 @@
     "description": "PDF を個別ページ、カスタム範囲、または手動選択で分割。サムネイルプレビュー、ZIP ダウンロード。すべての処理はブラウザで実行されます。",
     "searchTerms": "pdfbunkatsu pdfbs bunkatsu pdf"
   },
+  "pdf-compress": {
+    "title": "PDF 圧縮 - オンラインで PDF ファイルサイズを縮小",
+    "shortTitle": "PDF 圧縮",
+    "description": "品質調整可能な PDF 圧縮ツール。ファイルサイズを縮小しながら読みやすさを維持。すべての処理はブラウザ上で完結します。",
+    "searchTerms": "pdfasshukuki pdfask asshuku bunsho"
+  },
   "image-watermark": {
     "title": "画像ウォーターマーク - テキスト・ロゴ透かし追加",
     "shortTitle": "画像ウォーターマーク",

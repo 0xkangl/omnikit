@@ -282,6 +282,12 @@
     "description": "将 PDF 拆分为单独页面、自定义范围或手动选择。缩略图预览、ZIP 下载。所有处理在浏览器本地完成。",
     "searchTerms": "pdfchaifen pdfcf chaifen fenye chaiye"
   },
+  "pdf-compress": {
+    "title": "PDF 压缩 - 在线减小 PDF 文件大小",
+    "shortTitle": "PDF 压缩",
+    "description": "可调质量的 PDF 压缩工具，在减小文件大小的同时保持可读性。所有处理在浏览器本地完成。",
+    "searchTerms": "pdfyasuoqi pdfysq yasuo wendang tuxiang"
+  },
   "image-watermark": {
     "title": "图片水印 - 添加文字或 Logo 水印",
     "shortTitle": "图片水印",
