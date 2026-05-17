@@ -7,7 +7,7 @@ function WebsiteJsonLd() {
     name: "OmniKit",
     url: SITE_URL,
     description:
-      "Free online developer tools that run entirely in your browser. JSON formatter, Base64 encoder, password generator, hash calculator, JWT debugger, and 30+ more utilities. No data sent to any server.",
+      "Free online developer tools that run entirely in your browser. JSON formatter, Base64 encoder, password generator, hash calculator, JWT debugger, and 45+ more utilities. No data sent to any server.",
     potentialAction: {
       "@type": "SearchAction",
       target: {

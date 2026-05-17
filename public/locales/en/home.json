@@ -1,6 +1,6 @@
 {
   "title": "OmniKit - Free Online JSON, Base64, JWT, Regex Developer Tools",
-  "metaDescription": "Free browser-based developer tools: JSON formatter, Base64 encoder, JWT debugger, regex tester, QR generator, hash calculator, and 25+ more. No data leaves your browser.",
+  "metaDescription": "Free browser-based developer tools: JSON formatter, Base64 encoder, JWT debugger, regex tester, QR generator, hash calculator, and 45+ more. No data leaves your browser.",
   "badge": "Free & Open Source",
   "subtitle": "Your Swiss Army Knife for Dev",
   "tagline": "No sign-up, no tracking — just results.",
@@ -12,8 +12,8 @@
   "viewAll": "All",
   "clearSearch": "Clear search",
   "quickAccess": "Quick Access",
-  "toolCount": "35+ free developer tools",
-  "brandDescription": "OmniKit is a collection of 35+ free, browser-based developer tools — all processing happens locally in your browser. No sign-up, no tracking, no data ever leaves your device. Tools include a JSON formatter and validator, Base64 encoder and decoder, JWT debugger with signature verification, regex tester with real-time matching, QR code generator with logo support, hash calculator supporting MD5 through SHA-512 and beyond, encryption and decryption for AES and other ciphers, UUID generator, cron expression builder, text diff viewer, and many more. Built as a PWA, OmniKit works offline after the first visit. Open source and free forever.",
+  "toolCount": "52+ free developer tools",
+  "brandDescription": "OmniKit is a collection of 52+ free, browser-based developer tools — all processing happens locally in your browser. No sign-up, no tracking, no data ever leaves your device. Tools include a JSON formatter and validator, Base64 encoder and decoder, JWT debugger with signature verification, regex tester with real-time matching, QR code generator with logo support, hash calculator supporting MD5 through SHA-512 and beyond, encryption and decryption for AES and other ciphers, UUID generator, cron expression builder, text diff viewer, and many more. Built as a PWA, OmniKit works offline after the first visit. Open source and free forever.",
   "whyTitle": "Why OmniKit?",
   "whyPrivacyTitle": "Privacy First",
   "whyPrivacyDesc": "All processing happens in your browser. No data is ever sent to any server.",

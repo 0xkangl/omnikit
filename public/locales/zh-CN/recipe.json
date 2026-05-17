@@ -81,7 +81,11 @@
     "sql-minify": { "name": "SQL 压缩", "desc": "压缩 SQL 查询" },
     "uuid-gen": { "name": "UUID 生成器", "desc": "生成 UUID v4 或 v7" },
     "qrcode-gen": { "name": "二维码生成器", "desc": "从文本生成二维码" },
-    "image-compress": { "name": "图片压缩", "desc": "压缩和调整图片大小" }
+    "image-resize": { "name": "调整大小", "desc": "调整图片尺寸" },
+    "image-compress": { "name": "压缩图片", "desc": "压缩图片质量" },
+    "image-convert": { "name": "转换格式", "desc": "转换图片格式" },
+    "image-crop": { "name": "裁剪图片", "desc": "裁剪图片区域" },
+    "image-watermark": { "name": "添加水印", "desc": "添加文字水印" }
   },
   "params": {
     "key": "密钥",
@@ -108,7 +112,16 @@
     "numbers": "数字 (0-9)",
     "symbols": "符号 (!@#)",
     "resizeMode": "调整大小",
-    "resizePercent": "百分比"
+    "resizePercent": "百分比",
+    "cropX": "X 坐标",
+    "cropY": "Y 坐标",
+    "cropWidth": "宽度",
+    "cropHeight": "高度",
+    "cropMode": "裁剪模式",
+    "watermarkText": "水印文字",
+    "position": "位置",
+    "opacity": "透明度",
+    "fontSize": "字号"
   },
   "placeholders": {
     "encryptionKey": "加密密钥",
@@ -119,7 +132,10 @@
     "replacementString": "替换字符串",
     "regexFlags": "正则标志（如 g、gi）",
     "widthPx": "宽度（像素）",
-    "heightPx": "高度（像素）"
+    "heightPx": "高度（像素）",
+    "xPx": "X 坐标（像素）",
+    "yPx": "Y 坐标（像素）",
+    "watermarkTextPlaceholder": "水印文字"
   },
   "errors": {
     "keyRequired": "密钥不能为空",
@@ -136,6 +152,11 @@
     "none": "无",
     "byPercent": "按百分比",
     "custom": "自定义",
+    "center": "居中",
+    "topLeft": "左上",
+    "topRight": "右上",
+    "bottomLeft": "左下",
+    "bottomRight": "右下",
     "lowL": "低 (L)",
     "mediumM": "中 (M)",
     "quartileQ": "较高 (Q)",

@@ -81,7 +81,11 @@
     "sql-minify": { "name": "SQL Minify", "desc": "Minify SQL query" },
     "uuid-gen": { "name": "UUID Generator", "desc": "Generate UUID v4 or v7" },
     "qrcode-gen": { "name": "QR Code Generator", "desc": "Generate QR code from text" },
-    "image-compress": { "name": "Image Compress", "desc": "Compress and resize images" }
+    "image-resize": { "name": "Resize Image", "desc": "Resize image dimensions" },
+    "image-compress": { "name": "Compress Image", "desc": "Compress image quality" },
+    "image-convert": { "name": "Convert Format", "desc": "Convert image format" },
+    "image-crop": { "name": "Crop Image", "desc": "Crop image to region" },
+    "image-watermark": { "name": "Add Watermark", "desc": "Add text watermark to image" }
   },
   "params": {
     "key": "Key",
@@ -108,7 +112,16 @@
     "numbers": "Numbers (0-9)",
     "symbols": "Symbols (!@#)",
     "resizeMode": "Resize",
-    "resizePercent": "Percent"
+    "resizePercent": "Percent",
+    "cropX": "X Position",
+    "cropY": "Y Position",
+    "cropWidth": "Width",
+    "cropHeight": "Height",
+    "cropMode": "Crop Mode",
+    "watermarkText": "Text",
+    "position": "Position",
+    "opacity": "Opacity",
+    "fontSize": "Font Size"
   },
   "placeholders": {
     "encryptionKey": "Encryption key",
@@ -119,7 +132,10 @@
     "replacementString": "Replacement string",
     "regexFlags": "Regex flags (e.g. g, gi)",
     "widthPx": "Width in px",
-    "heightPx": "Height in px"
+    "heightPx": "Height in px",
+    "xPx": "X in px",
+    "yPx": "Y in px",
+    "watermarkTextPlaceholder": "Watermark text"
   },
   "errors": {
     "keyRequired": "Key is required",
@@ -136,6 +152,11 @@
     "none": "None",
     "byPercent": "By Percent",
     "custom": "Custom",
+    "center": "Center",
+    "topLeft": "Top Left",
+    "topRight": "Top Right",
+    "bottomLeft": "Bottom Left",
+    "bottomRight": "Bottom Right",
     "lowL": "Low (L)",
     "mediumM": "Medium (M)",
     "quartileQ": "Quartile (Q)",

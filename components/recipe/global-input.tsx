@@ -6,6 +6,7 @@ import type { DataType } from "../../libs/recipe/types";
 import { StyledTextarea } from "../ui/input";
 import { Upload, FolderOpen, X } from "lucide-react";
 import { useDropZone } from "../../hooks/useDropZone";
+import ImageMetaTag from "../image/ImageMetaTag";
 
 interface GlobalInputProps {
   expectedType: DataType;
@@ -107,9 +108,12 @@ export default function GlobalInput({
 
       <div className="relative">
         {isImage ? (
-          <div className="bg-bg-input rounded-xl p-4 flex items-center justify-center border border-border-default hover:border-accent-cyan/30 transition-colors duration-300">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={value} alt="Input" className="max-h-48 rounded-lg object-contain" />
+          <div>
+            <div className="bg-bg-input rounded-xl p-4 flex items-center justify-center border border-border-default hover:border-accent-cyan/30 transition-colors duration-300">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={value} alt="Input" className="max-h-48 rounded-lg object-contain" />
+            </div>
+            <ImageMetaTag dataUrl={value} />
           </div>
         ) : (
           <StyledTextarea

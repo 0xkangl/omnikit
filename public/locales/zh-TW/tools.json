@@ -276,11 +276,41 @@
     "description": "將多個 PDF 檔案合併為一個文件。支援拖曳排序、縮圖預覽、即時下載。所有處理在瀏覽器本機完成。",
     "searchTerms": "pdfhebing pdfhb hebing pdf wenjian"
   },
+  "pdf-split": {
+    "title": "PDF 拆分工具 - 線上拆分 PDF 頁面或範圍",
+    "shortTitle": "PDF 拆分",
+    "description": "將 PDF 拆分為單獨頁面、自訂範圍或手動選擇。縮圖預覽、ZIP 下載。所有處理在瀏覽器本機完成。",
+    "searchTerms": "pdfchaifen pdfcf chafen fenye"
+  },
+  "pdf-compress": {
+    "title": "PDF 壓縮 - 線上減小 PDF 檔案大小",
+    "shortTitle": "PDF 壓縮",
+    "description": "可調品質的 PDF 壓縮工具，在減小檔案大小的同時保持可讀性。所有處理在瀏覽器本機完成。",
+    "searchTerms": "pdfyasuoqi pdfysq yasuo wendang tuxiang"
+  },
   "image-watermark": {
     "title": "圖片浮水印 - 新增文字或 Logo 浮水印",
     "shortTitle": "圖片浮水印",
     "description": "為圖片新增文字或 Logo 浮水印，自訂位置、透明度、旋轉和拼貼。支援 PNG、JPG、WebP。所有處理在瀏覽器本機完成。",
     "searchTerms": "tupianfushuiyin tpfyy fushuiyin yinji banquan"
+  },
+  "pdf-watermark": {
+    "title": "PDF 浮水印 - 為 PDF 添加文字與圖片浮水印",
+    "shortTitle": "PDF 浮水印",
+    "searchTerms": "pdffuyin pdfsy fuyin yinji banquan",
+    "description": "為 PDF 檔案添加文字或圖片浮水印。自訂字型、顏色、透明度、旋轉角度和平鋪方式。"
+  },
+  "image-to-pdf": {
+    "title": "圖片轉 PDF - 線上將多張圖片合併為 PDF",
+    "shortTitle": "圖片轉 PDF",
+    "description": "將 JPG、PNG、WebP、GIF 圖片轉換為 PDF 檔案。支援多種版面配置、頁面尺寸和邊距設定。所有處理在瀏覽器中完成。",
+    "searchTerms": "tupianzhuanpdf tpzpdf pdf hebing tupian"
+  },
+  "pdf-to-image": {
+    "title": "PDF 轉圖片 - 將 PDF 頁面轉換為 PNG、JPG、WebP",
+    "shortTitle": "PDF 轉圖片",
+    "description": "將 PDF 頁面轉換為 PNG、JPG 或 WebP 圖片，支援 DPI 調節、頁面選擇、單獨或批次 ZIP 下載。所有處理在瀏覽器本機完成。",
+    "searchTerms": "pdftupian pftp zhuanhuan tupian daochu"
   },
   "categories": {
     "text": "文本處理",

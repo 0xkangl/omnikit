@@ -276,11 +276,41 @@
     "description": "複数の PDF ファイルを1つのドキュメントに結合。ドラッグ＆ドロップで並べ替え、サムネイルプレビュー、即座にダウンロード。すべての処理はブラウザで実行されます。",
     "searchTerms": "pdfgattai pdfgt gattai pdf bunnsyo"
   },
+  "pdf-split": {
+    "title": "PDF 分割ツール - PDF をページまたは範囲ごとに分割",
+    "shortTitle": "PDF 分割",
+    "description": "PDF を個別ページ、カスタム範囲、または手動選択で分割。サムネイルプレビュー、ZIP ダウンロード。すべての処理はブラウザで実行されます。",
+    "searchTerms": "pdfbunkatsu pdfbs bunkatsu pdf"
+  },
+  "pdf-compress": {
+    "title": "PDF 圧縮 - オンラインで PDF ファイルサイズを縮小",
+    "shortTitle": "PDF 圧縮",
+    "description": "品質調整可能な PDF 圧縮ツール。ファイルサイズを縮小しながら読みやすさを維持。すべての処理はブラウザ上で完結します。",
+    "searchTerms": "pdfasshukuki pdfask asshuku bunsho"
+  },
   "image-watermark": {
     "title": "画像ウォーターマーク - テキスト・ロゴ透かし追加",
     "shortTitle": "画像ウォーターマーク",
     "description": "画像にテキストまたはロゴのウォーターマークを追加。位置、透明度、回転、タイル配置をカスタマイズ。PNG、JPG、WebP対応。全ての処理はブラウザで実行。",
     "searchTerms": "gazouotamaku gotmk mizushi shomei rogo"
+  },
+  "pdf-watermark": {
+    "title": "PDF 透かし - テキストと画像の透かしを追加",
+    "shortTitle": "PDF 透かし",
+    "searchTerms": "pdfsukaisi pdfsks mizuashi shirushi chosakuken",
+    "description": "PDFファイルにテキストまたは画像の透かしを追加。フォント、色、不透明度、回転、タイル表示をカスタマイズ。"
+  },
+  "image-to-pdf": {
+    "title": "画像を PDF に変換 - 複数画像をまとめて PDF 化",
+    "shortTitle": "画像→PDF",
+    "description": "JPG、PNG、WebP、GIF 画像を PDF に変換。複数のレイアウトモード、用紙サイズ、マージン設定に対応。すべてブラウザ内で処理。",
+    "searchTerms": "gazoupdf gpdf henkan gazou matome"
+  },
+  "pdf-to-image": {
+    "title": "PDF 画像変換 - PDF ページを PNG、JPG、WebP に変換",
+    "shortTitle": "PDF 画像変換",
+    "description": "PDFページをPNG、JPG、WebP画像に変換。DPI調整、ページ選択、個別またはZIP一括ダウンロードに対応。すべてブラウザで処理。",
+    "searchTerms": "pdftogazou ptfp gazou henkan"
   },
   "categories": {
     "text": "テキスト処理",

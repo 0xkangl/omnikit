@@ -276,11 +276,41 @@
     "description": "将多个 PDF 文件合并为一个文档。支持拖拽排序、缩略图预览、即时下载。所有处理在浏览器本地完成。",
     "searchTerms": "pdfhebing pdfhb hebing pdf wenjian"
   },
+  "pdf-split": {
+    "title": "PDF 拆分工具 - 在线拆分 PDF 页面或范围",
+    "shortTitle": "PDF 拆分",
+    "description": "将 PDF 拆分为单独页面、自定义范围或手动选择。缩略图预览、ZIP 下载。所有处理在浏览器本地完成。",
+    "searchTerms": "pdfchaifen pdfcf chaifen fenye chaiye"
+  },
+  "pdf-compress": {
+    "title": "PDF 压缩 - 在线减小 PDF 文件大小",
+    "shortTitle": "PDF 压缩",
+    "description": "可调质量的 PDF 压缩工具，在减小文件大小的同时保持可读性。所有处理在浏览器本地完成。",
+    "searchTerms": "pdfyasuoqi pdfysq yasuo wendang tuxiang"
+  },
   "image-watermark": {
     "title": "图片水印 - 添加文字或 Logo 水印",
     "shortTitle": "图片水印",
     "description": "为图片添加文字或 Logo 水印，自定义位置、透明度、旋转和平铺。支持 PNG、JPG、WebP。所有处理在浏览器本地完成。",
     "searchTerms": "tupianshuiyin tpsy shuiyin yinji banquan"
+  },
+  "pdf-watermark": {
+    "title": "PDF 水印 - 为 PDF 添加文字和图片水印",
+    "shortTitle": "PDF 水印",
+    "searchTerms": "pdfshuiyin pdfsy shuiyin yinji banquan",
+    "description": "为 PDF 文件添加文字或图片水印。自定义字体、颜色、透明度、旋转角度和平铺方式。"
+  },
+  "image-to-pdf": {
+    "title": "图片转 PDF - 在线将多张图片合成 PDF",
+    "shortTitle": "图片转 PDF",
+    "description": "将 JPG、PNG、WebP、GIF 图片转换为 PDF 文件。支持多种布局、页面尺寸和边距设置。所有处理在浏览器中完成。",
+    "searchTerms": "tupianzhuanpdf tpzpdf pdf hebing tupian"
+  },
+  "pdf-to-image": {
+    "title": "PDF 转图片 - 将 PDF 页面转换为 PNG、JPG、WebP",
+    "shortTitle": "PDF 转图片",
+    "description": "将 PDF 页面转换为 PNG、JPG 或 WebP 图片，支持 DPI 调节、页面选择、单独或批量 ZIP 下载。所有处理在浏览器本地完成。",
+    "searchTerms": "pdftupian pftp zhuanhuan tupian daochu"
   },
   "categories": {
     "text": "文本处理",

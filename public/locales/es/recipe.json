@@ -81,7 +81,11 @@
     "sql-minify": { "name": "Minificar SQL", "desc": "Minificar consulta SQL" },
     "uuid-gen": { "name": "Generador UUID", "desc": "Generar UUID v4 o v7" },
     "qrcode-gen": { "name": "Generador QR", "desc": "Generar código QR desde texto" },
-    "image-compress": { "name": "Comprimir imagen", "desc": "Comprimir y redimensionar imágenes" }
+    "image-resize": { "name": "Redimensionar", "desc": "Cambiar dimensiones de la imagen" },
+    "image-compress": { "name": "Comprimir imagen", "desc": "Comprimir calidad de imagen" },
+    "image-convert": { "name": "Convertir formato", "desc": "Convertir formato de imagen" },
+    "image-crop": { "name": "Recortar imagen", "desc": "Recortar región de la imagen" },
+    "image-watermark": { "name": "Añadir marca de agua", "desc": "Añadir marca de agua de texto" }
   },
   "params": {
     "key": "Clave",
@@ -108,7 +112,16 @@
     "numbers": "Números (0-9)",
     "symbols": "Símbolos (!@#)",
     "resizeMode": "Redimensionar",
-    "resizePercent": "Porcentaje"
+    "resizePercent": "Porcentaje",
+    "cropX": "Posición X",
+    "cropY": "Posición Y",
+    "cropWidth": "Ancho",
+    "cropHeight": "Alto",
+    "cropMode": "Modo de recorte",
+    "watermarkText": "Texto de marca",
+    "position": "Posición",
+    "opacity": "Opacidad",
+    "fontSize": "Tamaño de fuente"
   },
   "placeholders": {
     "encryptionKey": "Clave de cifrado",
@@ -119,7 +132,10 @@
     "replacementString": "Cadena de reemplazo",
     "regexFlags": "Flags de regex (ej. g, gi)",
     "widthPx": "Ancho en px",
-    "heightPx": "Alto en px"
+    "heightPx": "Alto en px",
+    "xPx": "X en px",
+    "yPx": "Y en px",
+    "watermarkTextPlaceholder": "Texto de marca de agua"
   },
   "errors": {
     "keyRequired": "La clave es obligatoria",
@@ -136,6 +152,11 @@
     "none": "Ninguno",
     "byPercent": "Por porcentaje",
     "custom": "Personalizado",
+    "center": "Centro",
+    "topLeft": "Arriba izquierda",
+    "topRight": "Arriba derecha",
+    "bottomLeft": "Abajo izquierda",
+    "bottomRight": "Abajo derecha",
     "lowL": "Bajo (L)",
     "mediumM": "Medio (M)",
     "quartileQ": "Cuartil (Q)",

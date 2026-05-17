@@ -230,10 +230,35 @@
     "shortTitle": "PDF Merger",
     "description": "Merge multiple PDF files into a single document. Drag-and-drop reorder, thumbnail preview, and instant download. All processing runs in your browser."
   },
+  "pdf-split": {
+    "title": "PDF Split - Split PDF into Pages or Ranges",
+    "shortTitle": "PDF Split",
+    "description": "Split a PDF into separate pages, custom ranges, or hand-picked selections. Thumbnail preview, ZIP download. All processing runs in your browser."
+  },
+  "pdf-compress": {
+    "title": "PDF Compressor - Reduce PDF File Size Online",
+    "shortTitle": "PDF Compressor",
+    "description": "Compress PDF files with adjustable quality. Reduce file size while maintaining readability. All processing runs in your browser."
+  },
   "image-watermark": {
     "title": "Image Watermark - Add Text or Logo Watermark",
     "shortTitle": "Image Watermark",
     "description": "Add text or logo watermarks to images. Customize position, opacity, rotation, and tiling. Supports PNG, JPG, WebP. All processing runs in your browser."
+  },
+  "pdf-watermark": {
+    "title": "PDF Watermark - Add Text & Image Watermarks to PDF",
+    "shortTitle": "PDF Watermark",
+    "description": "Add text or image watermarks to PDF files. Customize font, color, opacity, rotation, and tiling. All processing runs in your browser."
+  },
+  "image-to-pdf": {
+    "title": "Images to PDF - Convert Images to PDF Online",
+    "shortTitle": "Images to PDF",
+    "description": "Convert JPG, PNG, WebP, and GIF images into a single PDF. Multiple layout modes, page sizes, and margins. All processing in your browser."
+  },
+  "pdf-to-image": {
+    "title": "PDF to Image - Convert PDF Pages to PNG, JPG, WebP",
+    "shortTitle": "PDF to Image",
+    "description": "Convert PDF pages to PNG, JPG, or WebP images with DPI control. Select pages, adjust quality, download individually or as ZIP. All processing runs in your browser."
   },
   "categories": {
     "text": "Text Processing",

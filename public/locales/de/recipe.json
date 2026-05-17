@@ -81,7 +81,11 @@
     "sql-minify": { "name": "SQL minimieren", "desc": "SQL-Abfrage minimieren" },
     "uuid-gen": { "name": "UUID-Generator", "desc": "UUID v4 oder v7 generieren" },
     "qrcode-gen": { "name": "QR-Code-Generator", "desc": "QR-Code aus Text generieren" },
-    "image-compress": { "name": "Bild komprimieren", "desc": "Bilder komprimieren und skalieren" }
+    "image-resize": { "name": "Größe ändern", "desc": "Bildabmessungen ändern" },
+    "image-compress": { "name": "Bild komprimieren", "desc": "Bildqualität komprimieren" },
+    "image-convert": { "name": "Format konvertieren", "desc": "Bildformat konvertieren" },
+    "image-crop": { "name": "Bild zuschneiden", "desc": "Bildbereich zuschneiden" },
+    "image-watermark": { "name": "Wasserzeichen", "desc": "Text-Wasserzeichen hinzufügen" }
   },
   "params": {
     "key": "Schlüssel",
@@ -108,7 +112,16 @@
     "numbers": "Zahlen (0-9)",
     "symbols": "Sonderzeichen (!@#)",
     "resizeMode": "Größe anpassen",
-    "resizePercent": "Prozent"
+    "resizePercent": "Prozent",
+    "cropX": "X-Position",
+    "cropY": "Y-Position",
+    "cropWidth": "Breite",
+    "cropHeight": "Höhe",
+    "cropMode": "Zuschnittmodus",
+    "watermarkText": "Wasserzeichentext",
+    "position": "Position",
+    "opacity": "Deckkraft",
+    "fontSize": "Schriftgröße"
   },
   "placeholders": {
     "encryptionKey": "Verschlüsselungsschlüssel",
@@ -119,7 +132,10 @@
     "replacementString": "Ersetzungsstring",
     "regexFlags": "Regex-Flags (z.B. g, gi)",
     "widthPx": "Breite in px",
-    "heightPx": "Höhe in px"
+    "heightPx": "Höhe in px",
+    "xPx": "X in px",
+    "yPx": "Y in px",
+    "watermarkTextPlaceholder": "Wasserzeichentext"
   },
   "errors": {
     "keyRequired": "Schlüssel ist erforderlich",
@@ -136,6 +152,11 @@
     "none": "Keine",
     "byPercent": "Nach Prozent",
     "custom": "Benutzerdefiniert",
+    "center": "Mitte",
+    "topLeft": "Oben links",
+    "topRight": "Oben rechts",
+    "bottomLeft": "Unten links",
+    "bottomRight": "Unten rechts",
     "lowL": "Niedrig (L)",
     "mediumM": "Mittel (M)",
     "quartileQ": "Quartil (Q)",

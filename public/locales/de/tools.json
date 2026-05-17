@@ -230,10 +230,35 @@
     "shortTitle": "PDF Zusammenführen",
     "description": "Führen Sie mehrere PDF-Dateien zu einem Dokument zusammen. Drag-and-Drop-Sortierung, Vorschaubilder und sofortiger Download. Die gesamte Verarbeitung läuft in Ihrem Browser."
   },
+  "pdf-split": {
+    "title": "PDF Aufteilen - PDF nach Seiten oder Bereichen aufteilen",
+    "shortTitle": "PDF Aufteilen",
+    "description": "Teilen Sie ein PDF in einzelne Seiten, benutzerdefinierte Bereiche oder Handauswahl auf. Vorschaubilder, ZIP-Download. Die gesamte Verarbeitung läuft in Ihrem Browser."
+  },
+  "pdf-compress": {
+    "title": "PDF-Kompressor - PDF-Dateigröße Online Reduzieren",
+    "shortTitle": "PDF-Kompressor",
+    "description": "Komprimieren Sie PDF-Dateien mit einstellbarer Qualität. Reduzieren Sie die Dateigröße bei erhaltener Lesbarkeit. Die gesamte Verarbeitung erfolgt in Ihrem Browser."
+  },
   "image-watermark": {
     "title": "Bildwasserzeichen - Text oder Logo hinzufügen",
     "shortTitle": "Wasserzeichen",
     "description": "Fügen Sie Text- oder Logo-Wasserzeichen zu Bildern hinzu. Passen Sie Position, Deckkraft, Drehung und Kachelung an. Unterstützt PNG, JPG, WebP. Die gesamte Verarbeitung erfolgt in Ihrem Browser."
+  },
+  "pdf-watermark": {
+    "title": "PDF-Wasserzeichen - Text- und Bildwasserzeichen hinzufügen",
+    "shortTitle": "PDF-Wasserzeichen",
+    "description": "Fügen Sie Text- oder Bildwasserzeichen zu PDF-Dateien hinzu. Passen Sie Schriftart, Farbe, Deckkraft, Drehung und Kachelung an."
+  },
+  "image-to-pdf": {
+    "title": "Bilder zu PDF - Bilder online in PDF umwandeln",
+    "shortTitle": "Bilder zu PDF",
+    "description": "Wandeln Sie JPG-, PNG-, WebP- und GIF-Bilder in ein einziges PDF um. Mehrere Layout-Modi, Seitengrößen und Ränder. Alle Verarbeitung im Browser."
+  },
+  "pdf-to-image": {
+    "title": "PDF zu Bild - PDF-Seiten als PNG, JPG, WebP konvertieren",
+    "shortTitle": "PDF zu Bild",
+    "description": "Konvertieren Sie PDF-Seiten in PNG-, JPG- oder WebP-Bilder mit DPI-Kontrolle. Seitenauswahl, Qualitätsanpassung, Einzel- oder ZIP-Download. Alles im Browser."
   },
   "categories": {
     "text": "Textverarbeitung",

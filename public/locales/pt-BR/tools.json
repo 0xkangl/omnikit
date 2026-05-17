@@ -230,10 +230,35 @@
     "shortTitle": "Mesclar PDF",
     "description": "Mescle vários arquivos PDF em um único documento. Reordenação por arrastar e soltar, pré-visualização de miniaturas e download instantâneo. Todo o processamento é feito no seu navegador."
   },
+  "pdf-split": {
+    "title": "Dividir PDF - Separar PDF por Páginas ou Intervalos",
+    "shortTitle": "Dividir PDF",
+    "description": "Divida um PDF em páginas individuais, intervalos personalizados ou seleções manuais. Pré-visualização de miniaturas, download em ZIP. Todo o processamento é feito no seu navegador."
+  },
+  "pdf-compress": {
+    "title": "Compressor de PDF - Reduza o Tamanho do PDF Online",
+    "shortTitle": "Compressor de PDF",
+    "description": "Comprima arquivos PDF com qualidade ajustável. Reduza o tamanho mantendo a legibilidade. Todo o processamento é feito no seu navegador."
+  },
   "image-watermark": {
     "title": "Marca d'Água - Adicionar Texto ou Logo",
     "shortTitle": "Marca d'Água",
     "description": "Adicione marcas d'água de texto ou logo em imagens. Personalize posição, opacidade, rotação e mosaico. Suporta PNG, JPG, WebP. Todo o processamento é feito no seu navegador."
+  },
+  "pdf-watermark": {
+    "title": "Marca d'água PDF - Adicione marcas d'água de texto e imagem ao PDF",
+    "shortTitle": "Marca d'água PDF",
+    "description": "Adicione marcas d'água de texto ou imagem a arquivos PDF. Personalize a fonte, cor, opacidade, rotação e blocagem."
+  },
+  "image-to-pdf": {
+    "title": "Imagens para PDF - Converta Imagens em PDF Online",
+    "shortTitle": "Imagens para PDF",
+    "description": "Converta imagens JPG, PNG, WebP e GIF em um único PDF. Vários modos de layout, tamanhos de página e margens. Todo o processamento no seu navegador."
+  },
+  "pdf-to-image": {
+    "title": "PDF para Imagem - Converter páginas PDF para PNG, JPG, WebP",
+    "shortTitle": "PDF para Imagem",
+    "description": "Converta páginas PDF em imagens PNG, JPG ou WebP com controle de DPI. Selecione páginas, ajuste a qualidade, baixe individualmente ou em ZIP. Tudo no seu navegador."
   },
   "categories": {
     "text": "Processamento de texto",

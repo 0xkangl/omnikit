@@ -44,8 +44,12 @@ import {
   Network,
   FlaskConical,
   Layers,
+  Scissors,
   FileStack,
   Droplets,
+  Stamp,
+  FileImage,
+  ImageDown,
 } from "lucide-react";
 
 export interface ToolCard {
@@ -133,7 +137,12 @@ export const TOOL_CATEGORIES: CategoryGroup[] = [
       "image-watermark",
       "image-crop",
       "image-rotate",
+      "image-to-pdf",
+      "pdf-to-image",
       "pdf-merge",
+      "pdf-split",
+      "pdf-compress",
+      "pdf-watermark",
     ],
   },
   {
@@ -177,7 +186,7 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
   cipher: ["hashing", "base64", "password"],
   numbase: ["color", "storageunit", "ascii", "subnet"],
   dbviewer: ["csv", "json", "yaml", "sqlformat"],
-  checksum: ["hashing", "cipher", "pdf-merge"],
+  checksum: ["hashing", "cipher", "pdf-merge", "pdf-compress"],
   storageunit: ["numbase", "checksum", "cssunit"],
   httpstatus: ["httpclient", "urlencoder", "subnet"],
   yaml: ["json", "csv", "markdown", "jsonts"],
@@ -195,6 +204,7 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
     "image-crop",
     "image-rotate",
     "image-watermark",
+    "image-to-pdf",
   ],
   "image-compress": [
     "image-resize",
@@ -202,7 +212,11 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
     "image-crop",
     "image-rotate",
     "pdf-merge",
+    "pdf-split",
+    "pdf-compress",
     "image-watermark",
+    "image-to-pdf",
+    "pdf-to-image",
   ],
   "image-convert": [
     "image-resize",
@@ -210,7 +224,11 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
     "image-crop",
     "image-rotate",
     "pdf-merge",
+    "pdf-split",
+    "pdf-compress",
     "image-watermark",
+    "image-to-pdf",
+    "pdf-to-image",
   ],
   "image-rotate": [
     "image-resize",
@@ -226,6 +244,7 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
     "image-crop",
     "image-rotate",
     "color",
+    "pdf-watermark",
   ],
   htmlcode: ["ascii", "httpstatus", "markdown"],
   ascii: ["htmlcode", "numbase", "httpstatus", "subnet"],
@@ -238,7 +257,28 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
   subnet: ["numbase", "httpstatus", "ascii"],
   recipe: ["json", "base64", "hashing"],
   batch: ["recipe", "hashing", "base64", "image-resize", "image-compress"],
-  "pdf-merge": ["image-compress", "image-convert", "checksum"],
+  "image-to-pdf": ["image-resize", "image-compress", "image-convert", "pdf-merge", "pdf-to-image"],
+  "pdf-to-image": [
+    "image-compress",
+    "image-convert",
+    "image-resize",
+    "pdf-merge",
+    "pdf-split",
+    "image-to-pdf",
+  ],
+  "pdf-merge": [
+    "pdf-split",
+    "pdf-compress",
+    "image-compress",
+    "image-convert",
+    "checksum",
+    "pdf-watermark",
+    "image-to-pdf",
+    "pdf-to-image",
+  ],
+  "pdf-split": ["pdf-merge", "image-compress", "image-convert", "pdf-to-image"],
+  "pdf-compress": ["pdf-merge", "image-compress", "checksum"],
+  "pdf-watermark": ["image-watermark", "pdf-merge", "image-compress", "image-convert", "color"],
 };
 
 const PALETTE_SIZE = 20;
@@ -498,11 +538,52 @@ export const TOOLS: ToolEntry[] = [
     ],
   },
   {
+    key: "pdf-split",
+    path: "/pdf-split",
+    icon: Scissors,
+    emoji: "✂️",
+    sameAs: ["https://www.adobe.com/acrobat/online/split-pdf.html"],
+  },
+  {
+    key: "pdf-compress",
+    path: "/pdf-compress",
+    icon: FileText,
+    emoji: "🗜️",
+    sameAs: [
+      "https://en.wikipedia.org/wiki/PDF",
+      "https://developer.mozilla.org/en-US/docs/Glossary/PDF",
+    ],
+  },
+  {
     key: "image-watermark",
     path: "/image-watermark",
     icon: Droplets,
     emoji: "💧",
     sameAs: [],
+  },
+  {
+    key: "pdf-watermark",
+    path: "/pdf-watermark",
+    icon: Stamp,
+    emoji: "🔏",
+    sameAs: ["https://en.wikipedia.org/wiki/Watermark"],
+  },
+  {
+    key: "image-to-pdf",
+    path: "/image-to-pdf",
+    icon: FileImage,
+    emoji: "🖼️",
+    sameAs: [
+      "https://en.wikipedia.org/wiki/PDF",
+      "https://developer.mozilla.org/en-US/docs/Glossary/PDF",
+    ],
+  },
+  {
+    key: "pdf-to-image",
+    path: "/pdf-to-image",
+    icon: ImageDown,
+    emoji: "📄",
+    sameAs: ["https://www.adobe.com/acrobat/online/pdf-to-image.html"],
   },
 ];
 

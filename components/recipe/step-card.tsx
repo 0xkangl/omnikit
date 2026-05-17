@@ -6,6 +6,7 @@ import type { RecipeStepDef, RecipeStepInstance, StepOutput } from "../../libs/r
 import { StyledInput, StyledSelect } from "../ui/input";
 import { Badge } from "../ui/badge";
 import { ChevronDown, Trash2, GripVertical, Power, Loader2, AlertCircle } from "lucide-react";
+import ImageMetaTag from "../image/ImageMetaTag";
 import "rc-slider/assets/index.css";
 
 const Slider = dynamic(() => import("rc-slider"), {
@@ -41,6 +42,9 @@ const OPTION_KEY_MAP: Record<string, string> = {
   "size.300": "options.size300",
   "size.600": "options.size600",
   "size.1024": "options.size1024",
+  "cropMode.center": "options.center",
+  "cropMode.top-left": "options.topLeft",
+  "cropMode.custom": "options.custom",
 };
 
 interface StepCardProps {
@@ -325,6 +329,7 @@ export default function StepCard({
                       alt="Step output"
                       className="max-h-32 rounded-lg object-contain"
                     />
+                    <ImageMetaTag dataUrl={output.result.output} />
                   </div>
                 ) : (
                   <div>

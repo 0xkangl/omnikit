@@ -230,10 +230,35 @@
     "shortTitle": "Fusionner PDF",
     "description": "Fusionnez plusieurs fichiers PDF en un seul document. Réorganisation par glisser-déposer, aperçu des miniatures et téléchargement instantané. Tout le traitement s'exécute dans votre navigateur."
   },
+  "pdf-split": {
+    "title": "Découper PDF - Séparer un PDF par pages ou plages",
+    "shortTitle": "Découper PDF",
+    "description": "Découpez un PDF en pages individuelles, plages personnalisées ou sélections manuelles. Aperçu des miniatures, téléchargement ZIP. Tout le traitement s'exécute dans votre navigateur."
+  },
+  "pdf-compress": {
+    "title": "Compresseur PDF - Réduire la Taille du PDF en Ligne",
+    "shortTitle": "Compresseur PDF",
+    "description": "Compressez vos fichiers PDF avec une qualité réglable. Réduisez la taille tout en maintenant la lisibilité. Tout le traitement s'effectue dans votre navigateur."
+  },
   "image-watermark": {
     "title": "Filigrane - Ajouter un Texte ou Logo sur Image",
     "shortTitle": "Filigrane",
     "description": "Ajoutez des filigranes texte ou logo sur vos images. Personnalisez position, opacité, rotation et motif en mosaïque. Supporte PNG, JPG, WebP. Tout le traitement s'exécute dans votre navigateur."
+  },
+  "pdf-watermark": {
+    "title": "Filigrane PDF - Ajoutez des filigranes texte et image au PDF",
+    "shortTitle": "Filigrane PDF",
+    "description": "Ajoutez des filigranes texte ou image aux fichiers PDF. Personnalisez la police, la couleur, l'opacité, la rotation et le pavage."
+  },
+  "image-to-pdf": {
+    "title": "Images en PDF - Convertir des Images en PDF en Ligne",
+    "shortTitle": "Images en PDF",
+    "description": "Convertissez des images JPG, PNG, WebP et GIF en un seul PDF. Plusieurs modes de mise en page, tailles de page et marges. Tout le traitement dans votre navigateur."
+  },
+  "pdf-to-image": {
+    "title": "PDF en Image - Convertir des pages PDF en PNG, JPG, WebP",
+    "shortTitle": "PDF en Image",
+    "description": "Convertissez des pages PDF en images PNG, JPG ou WebP avec contrôle DPI. Sélection de pages, réglage qualité, téléchargement individuel ou ZIP. Tout dans votre navigateur."
   },
   "categories": {
     "text": "Traitement de texte",

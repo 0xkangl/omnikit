@@ -81,7 +81,11 @@
     "sql-minify": { "name": "Minifier SQL", "desc": "Minifier une requête SQL" },
     "uuid-gen": { "name": "Générateur UUID", "desc": "Générer un UUID v4 ou v7" },
     "qrcode-gen": { "name": "Générateur QR", "desc": "Générer un code QR à partir de texte" },
-    "image-compress": { "name": "Compresser l'image", "desc": "Compresser et redimensionner des images" }
+    "image-resize": { "name": "Redimensionner", "desc": "Modifier les dimensions de l'image" },
+    "image-compress": { "name": "Compresser l'image", "desc": "Compresser la qualité de l'image" },
+    "image-convert": { "name": "Convertir le format", "desc": "Convertir le format d'image" },
+    "image-crop": { "name": "Rogner l'image", "desc": "Rogner une région de l'image" },
+    "image-watermark": { "name": "Ajouter un filigrane", "desc": "Ajouter un filigrane texte" }
   },
   "params": {
     "key": "Clé",
@@ -108,7 +112,16 @@
     "numbers": "Chiffres (0-9)",
     "symbols": "Symboles (!@#)",
     "resizeMode": "Redimensionner",
-    "resizePercent": "Pourcentage"
+    "resizePercent": "Pourcentage",
+    "cropX": "Position X",
+    "cropY": "Position Y",
+    "cropWidth": "Largeur",
+    "cropHeight": "Hauteur",
+    "cropMode": "Mode de recadrage",
+    "watermarkText": "Texte du filigrane",
+    "position": "Position",
+    "opacity": "Opacité",
+    "fontSize": "Taille de police"
   },
   "placeholders": {
     "encryptionKey": "Clé de chiffrement",
@@ -119,7 +132,10 @@
     "replacementString": "Chaîne de remplacement",
     "regexFlags": "Indicateurs regex (ex: g, gi)",
     "widthPx": "Largeur en px",
-    "heightPx": "Hauteur en px"
+    "heightPx": "Hauteur en px",
+    "xPx": "X en px",
+    "yPx": "Y en px",
+    "watermarkTextPlaceholder": "Texte du filigrane"
   },
   "errors": {
     "keyRequired": "La clé est obligatoire",
@@ -136,6 +152,11 @@
     "none": "Aucun",
     "byPercent": "Par pourcentage",
     "custom": "Personnalisé",
+    "center": "Centre",
+    "topLeft": "En haut à gauche",
+    "topRight": "En haut à droite",
+    "bottomLeft": "En bas à gauche",
+    "bottomRight": "En bas à droite",
     "lowL": "Bas (L)",
     "mediumM": "Moyen (M)",
     "quartileQ": "Quartile (Q)",

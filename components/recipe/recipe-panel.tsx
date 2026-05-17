@@ -22,6 +22,7 @@ import {
   Replace,
   PlusCircle,
 } from "lucide-react";
+import ImageMetaTag from "../image/ImageMetaTag";
 
 interface RecipePanelProps {
   finalOutput: string | null;
@@ -264,13 +265,16 @@ export default function RecipePanel({
             </div>
           ) : hasOutput ? (
             finalOutputType === "image" ? (
-              <div className="bg-bg-input rounded-xl p-4 flex items-center justify-center min-h-[30vh] lg:min-h-[50vh] border border-border-default">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={finalOutput}
-                  alt="Output"
-                  className="max-h-[30vh] lg:max-h-[50vh] max-w-full rounded-lg object-contain"
-                />
+              <div>
+                <div className="bg-bg-input rounded-xl p-4 flex items-center justify-center min-h-[30vh] lg:min-h-[50vh] border border-border-default">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={finalOutput}
+                    alt="Output"
+                    className="max-h-[30vh] lg:max-h-[50vh] max-w-full rounded-lg object-contain"
+                  />
+                </div>
+                <ImageMetaTag dataUrl={finalOutput} />
               </div>
             ) : (
               <pre className="text-xs bg-bg-input rounded-xl p-4 min-h-[30vh] lg:min-h-[50vh] max-h-[30vh] lg:max-h-[50vh] overflow-auto whitespace-pre-wrap break-all text-fg-primary border border-border-default leading-relaxed">

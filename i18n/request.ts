@@ -54,8 +54,13 @@ const namespaces = [
   "sqlformat",
   "recipe",
   "batch",
+  "pdf-compress",
   "pdf-merge",
+  "pdf-split",
   "image-watermark",
+  "pdf-watermark",
+  "image-to-pdf",
+  "pdf-to-image",
 ];
 
 export default getRequestConfig(async ({ requestLocale }) => {

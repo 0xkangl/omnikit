@@ -33,7 +33,9 @@ export const TOOL_STEP_MAP: Record<string, StepMapping> = {
   "/extractor": (state) => ((state.type as string) === "url" ? "extract-urls" : "extract-emails"),
   "/password": "password-gen",
   "/qrcode": "qrcode-gen",
-  "/image": "image-compress",
+  "/image-resize": "image-resize",
+  "/image-compress": "image-compress",
+  "/image-convert": "image-convert",
 };
 
 export function resolveStepId(toolPath: string, toolState: Record<string, unknown>): string | null {
