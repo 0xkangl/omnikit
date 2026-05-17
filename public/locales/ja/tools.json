@@ -306,6 +306,12 @@
     "description": "JPG、PNG、WebP、GIF 画像を PDF に変換。複数のレイアウトモード、用紙サイズ、マージン設定に対応。すべてブラウザ内で処理。",
     "searchTerms": "gazoupdf gpdf henkan gazou matome"
   },
+  "pdf-to-image": {
+    "title": "PDF 画像変換 - PDF ページを PNG、JPG、WebP に変換",
+    "shortTitle": "PDF 画像変換",
+    "description": "PDFページをPNG、JPG、WebP画像に変換。DPI調整、ページ選択、個別またはZIP一括ダウンロードに対応。すべてブラウザで処理。",
+    "searchTerms": "pdftogazou ptfp gazou henkan"
+  },
   "categories": {
     "text": "テキスト処理",
     "encoding": "エンコード・変換",

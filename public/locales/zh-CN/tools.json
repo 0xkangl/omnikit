@@ -306,6 +306,12 @@
     "description": "将 JPG、PNG、WebP、GIF 图片转换为 PDF 文件。支持多种布局、页面尺寸和边距设置。所有处理在浏览器中完成。",
     "searchTerms": "tupianzhuanpdf tpzpdf pdf hebing tupian"
   },
+  "pdf-to-image": {
+    "title": "PDF 转图片 - 将 PDF 页面转换为 PNG、JPG、WebP",
+    "shortTitle": "PDF 转图片",
+    "description": "将 PDF 页面转换为 PNG、JPG 或 WebP 图片，支持 DPI 调节、页面选择、单独或批量 ZIP 下载。所有处理在浏览器本地完成。",
+    "searchTerms": "pdftupian pftp zhuanhuan tupian daochu"
+  },
   "categories": {
     "text": "文本处理",
     "encoding": "编码转换",
