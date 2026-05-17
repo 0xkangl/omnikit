@@ -81,7 +81,11 @@
     "sql-minify": { "name": "SQL 圧縮", "desc": "SQL クエリを圧縮" },
     "uuid-gen": { "name": "UUID 生成", "desc": "UUID v4 または v7 を生成" },
     "qrcode-gen": { "name": "QR コード生成", "desc": "テキストから QR コードを生成" },
-    "image-compress": { "name": "画像圧縮", "desc": "画像を圧縮・リサイズ" }
+    "image-resize": { "name": "リサイズ", "desc": "画像のサイズを変更" },
+    "image-compress": { "name": "画像圧縮", "desc": "画像の品質を圧縮" },
+    "image-convert": { "name": "フォーマット変換", "desc": "画像フォーマットを変換" },
+    "image-crop": { "name": "トリミング", "desc": "画像を指定領域にトリミング" },
+    "image-watermark": { "name": "透かし追加", "desc": "テキストの透かしを追加" }
   },
   "params": {
     "key": "キー",
@@ -108,7 +112,16 @@
     "numbers": "数字 (0-9)",
     "symbols": "記号 (!@#)",
     "resizeMode": "リサイズ",
-    "resizePercent": "パーセント"
+    "resizePercent": "パーセント",
+    "cropX": "X 座標",
+    "cropY": "Y 座標",
+    "cropWidth": "幅",
+    "cropHeight": "高さ",
+    "cropMode": "クロップモード",
+    "watermarkText": "透かしテキスト",
+    "position": "位置",
+    "opacity": "不透明度",
+    "fontSize": "フォントサイズ"
   },
   "placeholders": {
     "encryptionKey": "暗号化キー",
@@ -119,7 +132,10 @@
     "replacementString": "置換文字列",
     "regexFlags": "正規表現フラグ（例: g、gi）",
     "widthPx": "幅（px）",
-    "heightPx": "高さ（px）"
+    "heightPx": "高さ（px）",
+    "xPx": "X 座標（px）",
+    "yPx": "Y 座標（px）",
+    "watermarkTextPlaceholder": "透かしテキスト"
   },
   "errors": {
     "keyRequired": "キーは必須です",
@@ -136,6 +152,11 @@
     "none": "なし",
     "byPercent": "パーセント指定",
     "custom": "カスタム",
+    "center": "中央",
+    "topLeft": "左上",
+    "topRight": "右上",
+    "bottomLeft": "左下",
+    "bottomRight": "右下",
     "lowL": "低 (L)",
     "mediumM": "中 (M)",
     "quartileQ": "やや高 (Q)",

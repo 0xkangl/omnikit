@@ -81,7 +81,11 @@
     "sql-minify": { "name": "SQL 압축", "desc": "SQL 쿼리 압축" },
     "uuid-gen": { "name": "UUID 생성기", "desc": "UUID v4 또는 v7 생성" },
     "qrcode-gen": { "name": "QR 코드 생성", "desc": "텍스트로 QR 코드 생성" },
-    "image-compress": { "name": "이미지 압축", "desc": "이미지 압축 및 크기 조정" }
+    "image-resize": { "name": "크기 조정", "desc": "이미지 크기 변경" },
+    "image-compress": { "name": "이미지 압축", "desc": "이미지 품질 압축" },
+    "image-convert": { "name": "형식 변환", "desc": "이미지 형식 변환" },
+    "image-crop": { "name": "이미지 자르기", "desc": "이미지 영역 자르기" },
+    "image-watermark": { "name": "워터마크 추가", "desc": "텍스트 워터마크 추가" }
   },
   "params": {
     "key": "키",
@@ -108,7 +112,16 @@
     "numbers": "숫자 (0-9)",
     "symbols": "기호 (!@#)",
     "resizeMode": "크기 조정",
-    "resizePercent": "퍼센트"
+    "resizePercent": "퍼센트",
+    "cropX": "X 좌표",
+    "cropY": "Y 좌표",
+    "cropWidth": "너비",
+    "cropHeight": "높이",
+    "cropMode": "자르기 모드",
+    "watermarkText": "워터마크 텍스트",
+    "position": "위치",
+    "opacity": "투명도",
+    "fontSize": "글꼴 크기"
   },
   "placeholders": {
     "encryptionKey": "암호화 키",
@@ -119,7 +132,10 @@
     "replacementString": "대체 문자열",
     "regexFlags": "정규식 플래그 (예: g, gi)",
     "widthPx": "너비 (px)",
-    "heightPx": "높이 (px)"
+    "heightPx": "높이 (px)",
+    "xPx": "X 좌표 (px)",
+    "yPx": "Y 좌표 (px)",
+    "watermarkTextPlaceholder": "워터마크 텍스트"
   },
   "errors": {
     "keyRequired": "키를 입력해 주세요",
@@ -136,6 +152,11 @@
     "none": "없음",
     "byPercent": "비율로",
     "custom": "사용자 지정",
+    "center": "가운데",
+    "topLeft": "왼쪽 상단",
+    "topRight": "오른쪽 상단",
+    "bottomLeft": "왼쪽 하단",
+    "bottomRight": "오른쪽 하단",
     "lowL": "낮음 (L)",
     "mediumM": "보통 (M)",
     "quartileQ": "높음 (Q)",

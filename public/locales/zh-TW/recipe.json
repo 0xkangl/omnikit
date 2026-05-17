@@ -81,7 +81,11 @@
     "sql-minify": { "name": "SQL 壓縮", "desc": "壓縮 SQL 查詢" },
     "uuid-gen": { "name": "UUID 產生器", "desc": "產生 UUID v4 或 v7" },
     "qrcode-gen": { "name": "QR Code 產生器", "desc": "從文字產生 QR Code" },
-    "image-compress": { "name": "圖片壓縮", "desc": "壓縮和調整圖片大小" }
+    "image-resize": { "name": "調整大小", "desc": "調整圖片尺寸" },
+    "image-compress": { "name": "壓縮圖片", "desc": "壓縮圖片品質" },
+    "image-convert": { "name": "轉換格式", "desc": "轉換圖片格式" },
+    "image-crop": { "name": "裁剪圖片", "desc": "裁剪圖片區域" },
+    "image-watermark": { "name": "新增浮水印", "desc": "新增文字浮水印" }
   },
   "params": {
     "key": "金鑰",
@@ -108,7 +112,16 @@
     "numbers": "數字 (0-9)",
     "symbols": "符號 (!@#)",
     "resizeMode": "調整大小",
-    "resizePercent": "百分比"
+    "resizePercent": "百分比",
+    "cropX": "X 座標",
+    "cropY": "Y 座標",
+    "cropWidth": "寬度",
+    "cropHeight": "高度",
+    "cropMode": "裁剪模式",
+    "watermarkText": "浮水印文字",
+    "position": "位置",
+    "opacity": "透明度",
+    "fontSize": "字號"
   },
   "placeholders": {
     "encryptionKey": "加密金鑰",
@@ -119,7 +132,10 @@
     "replacementString": "替換字串",
     "regexFlags": "正規標誌（如 g、gi）",
     "widthPx": "寬度（像素）",
-    "heightPx": "高度（像素）"
+    "heightPx": "高度（像素）",
+    "xPx": "X 座標（像素）",
+    "yPx": "Y 座標（像素）",
+    "watermarkTextPlaceholder": "浮水印文字"
   },
   "errors": {
     "keyRequired": "金鑰不能為空",
@@ -136,6 +152,11 @@
     "none": "無",
     "byPercent": "按百分比",
     "custom": "自訂",
+    "center": "置中",
+    "topLeft": "左上",
+    "topRight": "右上",
+    "bottomLeft": "左下",
+    "bottomRight": "右下",
     "lowL": "低 (L)",
     "mediumM": "中 (M)",
     "quartileQ": "較高 (Q)",

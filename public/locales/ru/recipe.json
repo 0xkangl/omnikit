@@ -81,7 +81,11 @@
     "sql-minify": { "name": "Минификация SQL", "desc": "Минифицировать SQL-запрос" },
     "uuid-gen": { "name": "Генератор UUID", "desc": "Сгенерировать UUID v4 или v7" },
     "qrcode-gen": { "name": "Генератор QR-кодов", "desc": "Сгенерировать QR-код из текста" },
-    "image-compress": { "name": "Сжатие изображений", "desc": "Сжать и изменить размер изображений" }
+    "image-resize": { "name": "Изменить размер", "desc": "Изменить размеры изображения" },
+    "image-compress": { "name": "Сжатие изображений", "desc": "Сжать качество изображения" },
+    "image-convert": { "name": "Конвертировать формат", "desc": "Конвертировать формат изображения" },
+    "image-crop": { "name": "Обрезать", "desc": "Обрезать область изображения" },
+    "image-watermark": { "name": "Добавить водяной знак", "desc": "Добавить текстовый водяной знак" }
   },
   "params": {
     "key": "Ключ",
@@ -108,7 +112,16 @@
     "numbers": "Цифры (0-9)",
     "symbols": "Символы (!@#)",
     "resizeMode": "Изменить размер",
-    "resizePercent": "Процент"
+    "resizePercent": "Процент",
+    "cropX": "Позиция X",
+    "cropY": "Позиция Y",
+    "cropWidth": "Ширина",
+    "cropHeight": "Высота",
+    "cropMode": "Режим обрезки",
+    "watermarkText": "Текст водяного знака",
+    "position": "Позиция",
+    "opacity": "Непрозрачность",
+    "fontSize": "Размер шрифта"
   },
   "placeholders": {
     "encryptionKey": "Ключ шифрования",
@@ -119,7 +132,10 @@
     "replacementString": "Строка замены",
     "regexFlags": "Флаги regex (напр. g, gi)",
     "widthPx": "Ширина в px",
-    "heightPx": "Высота в px"
+    "heightPx": "Высота в px",
+    "xPx": "X в px",
+    "yPx": "Y в px",
+    "watermarkTextPlaceholder": "Текст водяного знака"
   },
   "errors": {
     "keyRequired": "Ключ обязателен",
@@ -136,6 +152,11 @@
     "none": "Нет",
     "byPercent": "По проценту",
     "custom": "Пользовательский",
+    "center": "Центр",
+    "topLeft": "Верхний левый",
+    "topRight": "Верхний правый",
+    "bottomLeft": "Нижний левый",
+    "bottomRight": "Нижний правый",
     "lowL": "Низкий (L)",
     "mediumM": "Средний (M)",
     "quartileQ": "Квартиль (Q)",
