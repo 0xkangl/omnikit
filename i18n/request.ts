@@ -60,6 +60,7 @@ const namespaces = [
   "image-watermark",
   "pdf-watermark",
   "image-to-pdf",
+  "pdf-to-image",
 ];
 
 export default getRequestConfig(async ({ requestLocale }) => {
