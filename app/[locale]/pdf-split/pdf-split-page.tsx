@@ -472,7 +472,10 @@ function Conversion() {
       </div>
 
       {/* Thumbnail grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 mb-4">
+      <div
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 mb-4 max-h-[480px] overflow-y-auto"
+        style={{ scrollbarGutter: "stable" }}
+      >
         {Array.from({ length: pageCount }, (_, i) => {
           const isSelected = selectedPages.has(i);
           const inRange =
@@ -639,13 +642,16 @@ function Conversion() {
                     )}
                   </div>
                   {groupPages.length > 0 ? (
-                    <div className="flex flex-wrap gap-1.5">
+                    <div
+                      className="flex gap-1.5 overflow-x-auto"
+                      style={{ scrollbarGutter: "stable" }}
+                    >
                       {groupPages.map((pi) => {
                         const thumbUrl = thumbnails.get(pi);
                         return (
                           <div
                             key={pi}
-                            className="relative group/thumb rounded border border-border-default overflow-hidden"
+                            className="relative group/thumb rounded border border-border-default overflow-hidden shrink-0"
                             style={{ width: 40, height: 52 }}
                           >
                             {thumbUrl ? (
