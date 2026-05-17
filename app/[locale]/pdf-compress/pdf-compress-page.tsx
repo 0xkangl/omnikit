@@ -8,7 +8,7 @@ import PrivacyBanner from "../../../components/privacy-banner";
 import DescriptionSection from "../../../components/description-section";
 import RelatedTools from "../../../components/related-tools";
 import ImageInfoBar from "../../../components/image/ImageInfoBar";
-import { Download, RefreshCw, FileText } from "lucide-react";
+import { Download, RefreshCw, FileText, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "../../../components/ui/button";
 import { showToast } from "../../../libs/toast";
 import { formatBytes } from "../../../utils/storage";
@@ -24,6 +24,29 @@ const Slider = dynamic(() => import("rc-slider"), {
 const RENDER_DPI = 150;
 const PDF_DPI = 72;
 const SCALE_FACTOR = RENDER_DPI / PDF_DPI;
+
+interface RenderablePage {
+  getViewport(o: { scale: number }): { width: number; height: number };
+  render(o: {
+    canvasContext: CanvasRenderingContext2D;
+    viewport: { width: number; height: number };
+  }): { promise: Promise<void> };
+}
+
+async function renderPageToDataUrl(page: RenderablePage) {
+  const viewport = page.getViewport({ scale: 1 });
+  const previewScale = Math.min(800 / viewport.width, 600 / viewport.height, SCALE_FACTOR);
+  const scaledViewport = page.getViewport({ scale: previewScale });
+  const canvas = document.createElement("canvas");
+  canvas.width = scaledViewport.width;
+  canvas.height = scaledViewport.height;
+  const ctx = canvas.getContext("2d")!;
+  await page.render({ canvasContext: ctx, viewport: scaledViewport }).promise;
+  const dataUrl = canvas.toDataURL("image/png");
+  canvas.width = 0;
+  canvas.height = 0;
+  return dataUrl;
+}
 
 const sliderStyles = {
   rail: { backgroundColor: "var(--border-default)", height: 4 },
@@ -49,6 +72,10 @@ function Conversion() {
   const [numPages, setNumPages] = useState(0);
   const [pageDimensions, setPageDimensions] = useState({ width: 0, height: 0 });
   const [previewDataUrl, setPreviewDataUrl] = useState<string | null>(null);
+  const [previewPage, setPreviewPage] = useState(1);
+
+  const pageCache = useRef<Map<number, string>>(new Map());
+  const renderAbortRef = useRef(0);
 
   // Compression state
   const [quality, setQuality] = useState(75);
@@ -85,30 +112,23 @@ function Conversion() {
         showToast(t("manyPages", { count }), "warning");
       }
 
-      // Get first page dimensions (in PDF points)
       const page = await pdf.getPage(1);
       const viewport = page.getViewport({ scale: 1 });
       const dimensions = { width: Math.round(viewport.width), height: Math.round(viewport.height) };
 
-      // Render first page preview to offscreen canvas → data URL
-      const previewScale = Math.min(800 / viewport.width, 600 / viewport.height, SCALE_FACTOR);
-      const scaledViewport = page.getViewport({ scale: previewScale });
-      const canvas = document.createElement("canvas");
-      canvas.width = scaledViewport.width;
-      canvas.height = scaledViewport.height;
-      const ctx = canvas.getContext("2d")!;
-      await page.render({ canvasContext: ctx, viewport: scaledViewport }).promise;
-      const dataUrl = canvas.toDataURL("image/png");
-      canvas.width = 0;
-      canvas.height = 0;
+      const dataUrl = await renderPageToDataUrl(page);
 
       pdf.destroy();
+
+      pageCache.current.clear();
+      pageCache.current.set(1, dataUrl);
 
       setSourceFile(file);
       setArrayBuffer(buffer);
       setNumPages(count);
       setPageDimensions(dimensions);
       setPreviewDataUrl(dataUrl);
+      setPreviewPage(1);
     } catch (e) {
       const msg = e instanceof Error ? e.message : "";
       if (msg.toLowerCase().includes("password") || msg.toLowerCase().includes("encrypt")) {
@@ -116,6 +136,37 @@ function Conversion() {
       } else {
         showToast(t("corruptedPdf"), "danger");
       }
+    }
+  }
+
+  async function changePreviewPage(pageNum: number) {
+    if (!arrayBuffer || pageNum < 1 || pageNum > numPages) return;
+
+    if (pageCache.current.has(pageNum)) {
+      setPreviewPage(pageNum);
+      setPreviewDataUrl(pageCache.current.get(pageNum)!);
+      return;
+    }
+
+    const callId = ++renderAbortRef.current;
+    setPreviewPage(pageNum);
+    setPreviewDataUrl(null);
+
+    try {
+      const pdfjs = await import("pdfjs-dist");
+      pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";
+      const pdf = await pdfjs.getDocument({ data: new Uint8Array(arrayBuffer.slice(0)) }).promise;
+      const page = await pdf.getPage(pageNum);
+      const dataUrl = await renderPageToDataUrl(page);
+      pdf.destroy();
+
+      if (callId !== renderAbortRef.current) return;
+
+      pageCache.current.set(pageNum, dataUrl);
+      setPreviewDataUrl(dataUrl);
+    } catch {
+      if (callId !== renderAbortRef.current) return;
+      showToast(t("corruptedPdf"), "danger");
     }
   }
 
@@ -217,11 +268,13 @@ function Conversion() {
     setNumPages(0);
     setPageDimensions({ width: 0, height: 0 });
     setPreviewDataUrl(null);
+    setPreviewPage(1);
     setQuality(75);
     setProcessing(false);
     setProgress(null);
     setResultBlob(null);
     initialLoadRef.current = true;
+    pageCache.current.clear();
     if (fileInputRef.current) fileInputRef.current.value = "";
   }
 
@@ -318,10 +371,16 @@ function Conversion() {
 
         {/* Preview panel (right) */}
         <div className="flex flex-col gap-3">
-          <div className="relative rounded-lg border border-border-default bg-bg-input overflow-hidden">
-            {previewDataUrl && (
+          <div className="relative rounded-lg border border-border-default bg-bg-input overflow-auto h-[70vh] flex items-center justify-center">
+            {previewDataUrl ? (
               /* eslint-disable-next-line @next/next/no-img-element -- data URL preview */
-              <img src={previewDataUrl} alt="PDF preview" className="w-full h-auto" />
+              <img
+                src={previewDataUrl}
+                alt={`PDF page ${previewPage} preview`}
+                className="w-full h-full object-contain"
+              />
+            ) : (
+              <div className="w-8 h-8 border-2 border-accent-cyan border-t-transparent rounded-full animate-spin" />
             )}
             {processing && (
               <div className="absolute inset-0 bg-bg-base/80 flex items-center justify-center">
@@ -336,6 +395,30 @@ function Conversion() {
               </div>
             )}
           </div>
+
+          {numPages > 1 && (
+            <div className="flex items-center justify-center gap-2">
+              <Button
+                variant="outline"
+                size="sm"
+                disabled={previewPage <= 1}
+                onClick={() => changePreviewPage(previewPage - 1)}
+              >
+                <ChevronLeft size={14} />
+              </Button>
+              <span className="text-sm text-fg-secondary tabular-nums">
+                {previewPage} / {numPages}
+              </span>
+              <Button
+                variant="outline"
+                size="sm"
+                disabled={previewPage >= numPages}
+                onClick={() => changePreviewPage(previewPage + 1)}
+              >
+                <ChevronRight size={14} />
+              </Button>
+            </div>
+          )}
 
           {/* Info bar with ImageInfoBar */}
           {resultBlob && (

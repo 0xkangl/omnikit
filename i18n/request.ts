@@ -54,6 +54,7 @@ const namespaces = [
   "sqlformat",
   "recipe",
   "batch",
+  "pdf-compress",
   "pdf-merge",
   "pdf-split",
   "image-watermark",
