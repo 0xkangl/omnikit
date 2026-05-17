@@ -299,6 +299,12 @@
     "searchTerms": "pdffuyin pdfsy fuyin yinji banquan",
     "description": "為 PDF 檔案添加文字或圖片浮水印。自訂字型、顏色、透明度、旋轉角度和平鋪方式。"
   },
+  "image-to-pdf": {
+    "title": "圖片轉 PDF - 線上將多張圖片合併為 PDF",
+    "shortTitle": "圖片轉 PDF",
+    "description": "將 JPG、PNG、WebP、GIF 圖片轉換為 PDF 檔案。支援多種版面配置、頁面尺寸和邊距設定。所有處理在瀏覽器中完成。",
+    "searchTerms": "tupianzhuanpdf tpzpdf pdf hebing tupian"
+  },
   "categories": {
     "text": "文本處理",
     "encoding": "編碼轉換",

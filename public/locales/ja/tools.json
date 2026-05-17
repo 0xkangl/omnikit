@@ -299,6 +299,12 @@
     "searchTerms": "pdfsukaisi pdfsks mizuashi shirushi chosakuken",
     "description": "PDFファイルにテキストまたは画像の透かしを追加。フォント、色、不透明度、回転、タイル表示をカスタマイズ。"
   },
+  "image-to-pdf": {
+    "title": "画像を PDF に変換 - 複数画像をまとめて PDF 化",
+    "shortTitle": "画像→PDF",
+    "description": "JPG、PNG、WebP、GIF 画像を PDF に変換。複数のレイアウトモード、用紙サイズ、マージン設定に対応。すべてブラウザ内で処理。",
+    "searchTerms": "gazoupdf gpdf henkan gazou matome"
+  },
   "categories": {
     "text": "テキスト処理",
     "encoding": "エンコード・変換",

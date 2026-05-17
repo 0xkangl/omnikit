@@ -249,6 +249,11 @@
     "shortTitle": "PDF-Wasserzeichen",
     "description": "Fügen Sie Text- oder Bildwasserzeichen zu PDF-Dateien hinzu. Passen Sie Schriftart, Farbe, Deckkraft, Drehung und Kachelung an."
   },
+  "image-to-pdf": {
+    "title": "Bilder zu PDF - Bilder online in PDF umwandeln",
+    "shortTitle": "Bilder zu PDF",
+    "description": "Wandeln Sie JPG-, PNG-, WebP- und GIF-Bilder in ein einziges PDF um. Mehrere Layout-Modi, Seitengrößen und Ränder. Alle Verarbeitung im Browser."
+  },
   "categories": {
     "text": "Textverarbeitung",
     "encoding": "Kodierung & Konvertierung",

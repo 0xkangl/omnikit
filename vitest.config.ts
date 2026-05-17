@@ -14,6 +14,7 @@ export default defineConfig({
       "libs/numbase/**/*.test.ts",
       "libs/deduplines/**/*.test.ts",
       "libs/image/**/*.test.ts",
+      "libs/image-to-pdf/**/*.test.ts",
       "libs/extractor/**/*.test.ts",
       "libs/password/**/*.test.ts",
       "libs/pdf-merge/**/*.test.ts",

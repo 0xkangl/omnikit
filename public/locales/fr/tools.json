@@ -249,6 +249,11 @@
     "shortTitle": "Filigrane PDF",
     "description": "Ajoutez des filigranes texte ou image aux fichiers PDF. Personnalisez la police, la couleur, l'opacité, la rotation et le pavage."
   },
+  "image-to-pdf": {
+    "title": "Images en PDF - Convertir des Images en PDF en Ligne",
+    "shortTitle": "Images en PDF",
+    "description": "Convertissez des images JPG, PNG, WebP et GIF en un seul PDF. Plusieurs modes de mise en page, tailles de page et marges. Tout le traitement dans votre navigateur."
+  },
   "categories": {
     "text": "Traitement de texte",
     "encoding": "Encodage et conversion",

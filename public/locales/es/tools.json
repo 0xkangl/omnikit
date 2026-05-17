@@ -249,6 +249,11 @@
     "shortTitle": "Marca de agua PDF",
     "description": "Añade marcas de agua de texto o imagen a archivos PDF. Personaliza la fuente, el color, la opacidad, la rotación y el mosaico."
   },
+  "image-to-pdf": {
+    "title": "Imágenes a PDF - Convierte Imágenes a PDF en Línea",
+    "shortTitle": "Imágenes a PDF",
+    "description": "Convierte imágenes JPG, PNG, WebP y GIF en un solo PDF. Múltiples modos de diseño, tamaños de página y márgenes. Todo se procesa en tu navegador."
+  },
   "categories": {
     "text": "Procesamiento de texto",
     "encoding": "Codificación y conversión",

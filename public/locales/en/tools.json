@@ -250,6 +250,11 @@
     "shortTitle": "PDF Watermark",
     "description": "Add text or image watermarks to PDF files. Customize font, color, opacity, rotation, and tiling. All processing runs in your browser."
   },
+  "image-to-pdf": {
+    "title": "Images to PDF - Convert Images to PDF Online",
+    "shortTitle": "Images to PDF",
+    "description": "Convert JPG, PNG, WebP, and GIF images into a single PDF. Multiple layout modes, page sizes, and margins. All processing in your browser."
+  },
   "categories": {
     "text": "Text Processing",
     "encoding": "Encoding & Conversion",

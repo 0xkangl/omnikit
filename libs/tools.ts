@@ -48,6 +48,7 @@ import {
   FileStack,
   Droplets,
   Stamp,
+  FileImage,
 } from "lucide-react";
 
 export interface ToolCard {
@@ -135,6 +136,7 @@ export const TOOL_CATEGORIES: CategoryGroup[] = [
       "image-watermark",
       "image-crop",
       "image-rotate",
+      "image-to-pdf",
       "pdf-merge",
       "pdf-split",
       "pdf-compress",
@@ -200,6 +202,7 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
     "image-crop",
     "image-rotate",
     "image-watermark",
+    "image-to-pdf",
   ],
   "image-compress": [
     "image-resize",
@@ -210,6 +213,7 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
     "pdf-split",
     "pdf-compress",
     "image-watermark",
+    "image-to-pdf",
   ],
   "image-convert": [
     "image-resize",
@@ -220,6 +224,7 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
     "pdf-split",
     "pdf-compress",
     "image-watermark",
+    "image-to-pdf",
   ],
   "image-rotate": [
     "image-resize",
@@ -248,6 +253,7 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
   subnet: ["numbase", "httpstatus", "ascii"],
   recipe: ["json", "base64", "hashing"],
   batch: ["recipe", "hashing", "base64", "image-resize", "image-compress"],
+  "image-to-pdf": ["image-resize", "image-compress", "image-convert", "pdf-merge"],
   "pdf-merge": [
     "pdf-split",
     "pdf-compress",
@@ -255,6 +261,7 @@ export const TOOL_RELATIONS: Record<string, string[]> = {
     "image-convert",
     "checksum",
     "pdf-watermark",
+    "image-to-pdf",
   ],
   "pdf-split": ["pdf-merge", "image-compress", "image-convert"],
   "pdf-compress": ["pdf-merge", "image-compress", "checksum"],
@@ -547,6 +554,16 @@ export const TOOLS: ToolEntry[] = [
     icon: Stamp,
     emoji: "🔏",
     sameAs: ["https://en.wikipedia.org/wiki/Watermark"],
+  },
+  {
+    key: "image-to-pdf",
+    path: "/image-to-pdf",
+    icon: FileImage,
+    emoji: "🖼️",
+    sameAs: [
+      "https://en.wikipedia.org/wiki/PDF",
+      "https://developer.mozilla.org/en-US/docs/Glossary/PDF",
+    ],
   },
 ];
 

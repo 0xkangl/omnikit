@@ -249,6 +249,11 @@
     "shortTitle": "Marca d'água PDF",
     "description": "Adicione marcas d'água de texto ou imagem a arquivos PDF. Personalize a fonte, cor, opacidade, rotação e blocagem."
   },
+  "image-to-pdf": {
+    "title": "Imagens para PDF - Converta Imagens em PDF Online",
+    "shortTitle": "Imagens para PDF",
+    "description": "Converta imagens JPG, PNG, WebP e GIF em um único PDF. Vários modos de layout, tamanhos de página e margens. Todo o processamento no seu navegador."
+  },
   "categories": {
     "text": "Processamento de texto",
     "encoding": "Codificação e conversão",
