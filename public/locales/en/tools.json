@@ -235,6 +235,11 @@
     "shortTitle": "Image Watermark",
     "description": "Add text or logo watermarks to images. Customize position, opacity, rotation, and tiling. Supports PNG, JPG, WebP. All processing runs in your browser."
   },
+  "image-to-pdf": {
+    "title": "Images to PDF - Convert Images to PDF Online",
+    "shortTitle": "Images to PDF",
+    "description": "Convert JPG, PNG, WebP, and GIF images into a single PDF. Multiple layout modes, page sizes, and margins. All processing in your browser."
+  },
   "categories": {
     "text": "Text Processing",
     "encoding": "Encoding & Conversion",
