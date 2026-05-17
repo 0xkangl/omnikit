@@ -282,6 +282,12 @@
     "description": "为图片添加文字或 Logo 水印，自定义位置、透明度、旋转和平铺。支持 PNG、JPG、WebP。所有处理在浏览器本地完成。",
     "searchTerms": "tupianshuiyin tpsy shuiyin yinji banquan"
   },
+  "image-to-pdf": {
+    "title": "图片转 PDF - 在线将多张图片合成 PDF",
+    "shortTitle": "图片转 PDF",
+    "description": "将 JPG、PNG、WebP、GIF 图片转换为 PDF 文件。支持多种布局、页面尺寸和边距设置。所有处理在浏览器中完成。",
+    "searchTerms": "tupianzhuanpdf tpzpdf pdf hebing tupian"
+  },
   "categories": {
     "text": "文本处理",
     "encoding": "编码转换",

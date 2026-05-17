@@ -282,6 +282,12 @@
     "description": "이미지에 텍스트 또는 로고 워터마크를 추가합니다. 위치, 투명도, 회전, 타일 배치를 맞춤 설정. PNG, JPG, WebP 지원. 모든 처리는 브라우저에서 실행됩니다.",
     "searchTerms": "imijiwoteomakeu ijwtk sutakka ugin rogo"
   },
+  "image-to-pdf": {
+    "title": "이미지를 PDF로 변환 - 여러 이미지를 하나의 PDF로",
+    "shortTitle": "이미지→PDF",
+    "description": "JPG, PNG, WebP, GIF 이미지를 PDF로 변환합니다. 다양한 레이아웃, 페이지 크기, 여백 설정을 지원합니다. 모든 처리는 브라우저에서 이루어집니다.",
+    "searchTerms": "imidzipdf izpdf pdf hapchi imiji"
+  },
   "categories": {
     "text": "텍스트 처리",
     "encoding": "인코딩 & 변환",

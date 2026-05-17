@@ -235,6 +235,11 @@
     "shortTitle": "Filigrane",
     "description": "Ajoutez des filigranes texte ou logo sur vos images. Personnalisez position, opacité, rotation et motif en mosaïque. Supporte PNG, JPG, WebP. Tout le traitement s'exécute dans votre navigateur."
   },
+  "image-to-pdf": {
+    "title": "Images en PDF - Convertir des Images en PDF en Ligne",
+    "shortTitle": "Images en PDF",
+    "description": "Convertissez des images JPG, PNG, WebP et GIF en un seul PDF. Plusieurs modes de mise en page, tailles de page et marges. Tout le traitement dans votre navigateur."
+  },
   "categories": {
     "text": "Traitement de texte",
     "encoding": "Encodage et conversion",

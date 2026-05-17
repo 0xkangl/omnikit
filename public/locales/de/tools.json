@@ -235,6 +235,11 @@
     "shortTitle": "Wasserzeichen",
     "description": "Fügen Sie Text- oder Logo-Wasserzeichen zu Bildern hinzu. Passen Sie Position, Deckkraft, Drehung und Kachelung an. Unterstützt PNG, JPG, WebP. Die gesamte Verarbeitung erfolgt in Ihrem Browser."
   },
+  "image-to-pdf": {
+    "title": "Bilder zu PDF - Bilder online in PDF umwandeln",
+    "shortTitle": "Bilder zu PDF",
+    "description": "Wandeln Sie JPG-, PNG-, WebP- und GIF-Bilder in ein einziges PDF um. Mehrere Layout-Modi, Seitengrößen und Ränder. Alle Verarbeitung im Browser."
+  },
   "categories": {
     "text": "Textverarbeitung",
     "encoding": "Kodierung & Konvertierung",

@@ -235,6 +235,11 @@
     "shortTitle": "Marca de Agua",
     "description": "Añade marcas de agua de texto o logo a imágenes. Personaliza posición, opacidad, rotación y mosaico. Soporta PNG, JPG, WebP. Todo el procesamiento se ejecuta en tu navegador."
   },
+  "image-to-pdf": {
+    "title": "Imágenes a PDF - Convierte Imágenes a PDF en Línea",
+    "shortTitle": "Imágenes a PDF",
+    "description": "Convierte imágenes JPG, PNG, WebP y GIF en un solo PDF. Múltiples modos de diseño, tamaños de página y márgenes. Todo se procesa en tu navegador."
+  },
   "categories": {
     "text": "Procesamiento de texto",
     "encoding": "Codificación y conversión",
