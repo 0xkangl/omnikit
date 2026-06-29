@@ -4,15 +4,19 @@
 /* ===== Theme Variables ===== */
 @layer base {
   :root {
-    --bg-base: #f8fafc;
+    /* 亮色 — 冷调制图纸 */
+    --bg-base: #eef2f6;
     --bg-surface: #ffffff;
-    --bg-elevated: #ffffff;
+    --bg-elevated: #f8fafc;
     --bg-input: #f1f5f9;
-    --fg-primary: #0f172a;
-    --fg-secondary: #475569;
-    --fg-muted: #94a3b8;
-    --border-default: #e2e8f0;
-    --border-subtle: #f1f5f9;
+    --fg-primary: #0c1f33;
+    --fg-secondary: #44607a;
+    --fg-muted: #8499ab;
+    --border-default: #d8e1ea;
+    --border-subtle: #e7edf3;
+    /* 强调色：青墨（白底可读的深蓝绿）+ 琥珀信号 */
+    --accent-cyan: #0e7490;
+    --signal: #d97706;
     --json-brace: #334155;
     --json-punctuation: #64748b;
     --json-arrow: #64748b;
@@ -44,15 +48,19 @@
   }
 
   .dark {
-    --bg-base: #0b0f1a;
-    --bg-surface: #111827;
-    --bg-elevated: #1e293b;
-    --bg-input: #0d1117;
-    --fg-primary: #f1f5f9;
-    --fg-secondary: #94a3b8;
-    --fg-muted: #64748b;
-    --border-default: #1e293b;
-    --border-subtle: #334155;
+    /* 暗色 — 蓝图海军蓝 */
+    --bg-base: #0a1622;
+    --bg-surface: #0f2436;
+    --bg-elevated: #16314a;
+    --bg-input: #0b1a2a;
+    --fg-primary: #eaf2f8;
+    --fg-secondary: #93a8bd;
+    --fg-muted: #5c7088;
+    --border-default: #1b3450;
+    --border-subtle: #16273b;
+    /* 强调色：青墨 + 琥珀信号 */
+    --accent-cyan: #22d3ee;
+    --signal: #f59e0b;
     --json-brace: #e2e8f0;
     --json-punctuation: #cbd5e1;
     --json-arrow: #94a3b8;
@@ -95,13 +103,16 @@
   --color-fg-muted: var(--fg-muted);
   --color-border-default: var(--border-default);
   --color-border-subtle: var(--border-subtle);
-  --color-accent-cyan: #06d6a0;
+  /* 青墨强调色随主题切换（亮:#0e7490 暗:#22d3ee） */
+  --color-accent-cyan: var(--accent-cyan);
   --color-accent-purple: #8b5cf6;
-  --color-accent-cyan-dim: rgba(6, 214, 160, 0.15);
+  --color-accent-cyan-dim: color-mix(in oklab, var(--accent-cyan) 15%, transparent);
   --color-accent-purple-dim: rgba(139, 92, 246, 0.15);
+  /* 琥珀信号色随主题切换（亮:#d97706 暗:#f59e0b） */
+  --color-signal: var(--signal);
   --color-danger: #ef4444;
-  --color-diff-add-line: rgba(6, 214, 160, 0.1);
-  --color-diff-add-word: rgba(6, 214, 160, 0.3);
+  --color-diff-add-line: color-mix(in oklab, var(--accent-cyan) 12%, transparent);
+  --color-diff-add-word: color-mix(in oklab, var(--accent-cyan) 32%, transparent);
   --color-diff-del-line: rgba(239, 68, 68, 0.1);
   --color-diff-del-word: rgba(239, 68, 68, 0.3);
 
@@ -112,12 +123,18 @@
 
   --font-family-mono: var(--font-mono), ui-monospace, monospace;
   --font-family-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-family-display:
+    var(--font-display), var(--font-sans), ui-sans-serif, system-ui, sans-serif;
 
-  --shadow-card: 0 0 0 1px rgba(6, 214, 160, 0.1), 0 4px 24px rgba(0, 0, 0, 0.4);
+  /* 蓝图制图卡片：发丝描边 + 短柔投影，非辉光 */
+  --shadow-card:
+    0 0 0 1px color-mix(in oklab, var(--accent-cyan) 8%, transparent),
+    0 1px 2px rgba(8, 20, 34, 0.06), 0 6px 16px rgba(8, 20, 34, 0.08);
   --shadow-card-hover:
-    0 0 0 1px rgba(6, 214, 160, 0.4), 0 0 20px rgba(6, 214, 160, 0.1), 0 8px 32px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 15px rgba(6, 214, 160, 0.3);
-  --shadow-input-focus: 0 0 0 2px rgba(6, 214, 160, 0.5);
+    0 0 0 1px color-mix(in oklab, var(--accent-cyan) 45%, transparent),
+    0 2px 4px rgba(8, 20, 34, 0.08), 0 12px 28px rgba(8, 20, 34, 0.14);
+  --shadow-glow: 0 0 0 1px color-mix(in oklab, var(--accent-cyan) 40%, transparent);
+  --shadow-input-focus: 0 0 0 2px color-mix(in oklab, var(--accent-cyan) 55%, transparent);
 }
 
 /* ===== Base Styles ===== */
@@ -137,6 +154,13 @@
   a {
     color: inherit;
     text-decoration: none;
+  }
+
+  /* 统一键盘焦点环：青墨色 */
+  :focus-visible {
+    outline: 2px solid var(--accent-cyan);
+    outline-offset: 2px;
+    border-radius: 2px;
   }
 
   .dark ::-webkit-scrollbar {
@@ -179,23 +203,63 @@
 }
 
 /* ===== Utility Classes ===== */
+@utility font-display {
+  font-family: var(--font-family-display);
+}
+
 @utility text-shadow-glow {
-  text-shadow: 0 0 30px rgba(6, 214, 160, 0.3);
+  text-shadow: 0 0 24px color-mix(in oklab, var(--accent-cyan) 28%, transparent);
 }
 
 @utility border-glow {
-  border-color: rgba(6, 214, 160, 0.4);
+  border-color: color-mix(in oklab, var(--accent-cyan) 45%, transparent);
 }
 
 @utility border-glow-strong {
-  border-color: rgba(6, 214, 160, 0.8);
+  border-color: color-mix(in oklab, var(--accent-cyan) 80%, transparent);
 }
 
+/* 蓝图网格：次级细线(24px) + 主级线(96px) */
 @utility bg-grid-pattern {
   background-image:
-    linear-gradient(rgba(6, 214, 160, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(6, 214, 160, 0.03) 1px, transparent 1px);
-  background-size: 40px 40px;
+    linear-gradient(color-mix(in oklab, var(--accent-cyan) 7%, transparent) 1px, transparent 1px),
+    linear-gradient(
+      90deg,
+      color-mix(in oklab, var(--accent-cyan) 7%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(color-mix(in oklab, var(--accent-cyan) 3%, transparent) 1px, transparent 1px),
+    linear-gradient(
+      90deg,
+      color-mix(in oklab, var(--accent-cyan) 3%, transparent) 1px,
+      transparent 1px
+    );
+  background-size:
+    96px 96px,
+    96px 96px,
+    24px 24px,
+    24px 24px;
+}
+
+/* 刻度尺分隔线：基线 + 等距 tick（制图量度语义） */
+@utility ruler-divider {
+  height: 7px;
+  background-image:
+    linear-gradient(var(--color-border-default), var(--color-border-default)),
+    repeating-linear-gradient(
+      90deg,
+      color-mix(in oklab, var(--accent-cyan) 55%, transparent) 0,
+      color-mix(in oklab, var(--accent-cyan) 55%, transparent) 1px,
+      transparent 1px,
+      transparent 8px
+    );
+  background-size:
+    100% 1px,
+    100% 7px;
+  background-position:
+    left top,
+    left top;
+  background-repeat: no-repeat, repeat-x;
 }
 
 @layer utilities {
@@ -357,11 +421,28 @@
   animation: backdrop-fade-in 200ms ease-out;
 }
 
+/* 首页 Hero 错峰淡入 */
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.hero-rise {
+  animation: hero-rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-drawer-right,
   .animate-drawer-up,
   .animate-backdrop,
-  .onboarding-pulse {
+  .onboarding-pulse,
+  .hero-rise {
     animation: none !important;
   }
 }

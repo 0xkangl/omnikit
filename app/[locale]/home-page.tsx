@@ -22,6 +22,20 @@ import { Search, X, LayoutGrid, Grid3X3, CircleHelp, Shield, Wifi, Heart } from 
 
 type ViewMode = "grouped" | "all";
 
+function CrosshairMark({ className }: { className: string }) {
+  return (
+    <span
+      className={`pointer-events-none absolute hidden text-accent-cyan/30 md:block ${className}`}
+      aria-hidden="true"
+    >
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor">
+        <path d="M11 1v20M1 11h20" strokeWidth="1" />
+        <circle cx="11" cy="11" r="4.5" strokeWidth="1" />
+      </svg>
+    </span>
+  );
+}
+
 function HeroSection({
   query,
   onQueryChange,
@@ -30,7 +44,9 @@ function HeroSection({
   searchPlaceholder,
   subtitle,
   tagline,
+  badge,
   clearLabel,
+  stats,
   inputRef,
 }: {
   query: string;
@@ -40,52 +56,96 @@ function HeroSection({
   searchPlaceholder: string;
   subtitle: string;
   tagline: string;
+  badge: string;
   clearLabel: string;
+  stats: string[];
   inputRef: React.RefObject<HTMLInputElement | null>;
 }) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-bg-base via-bg-base to-bg-surface">
-      <div className="bg-grid-pattern absolute inset-0" />
+    <section className="relative overflow-hidden border-b border-border-default bg-bg-base">
       <div
-        className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[200px] w-[500px] rounded-full bg-accent-cyan/5 blur-3xl"
+        className="bg-grid-pattern absolute inset-0 [mask-image:radial-gradient(ellipse_70%_70%_at_50%_30%,#000_40%,transparent_100%)]"
         aria-hidden="true"
       />
-      <div className="relative mx-auto max-w-5xl px-6 py-10 md:py-14 text-center">
-        <h1 className="text-2xl md:text-3xl font-mono font-bold text-fg-primary tracking-tight">
+      <div
+        className="pointer-events-none absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 h-[260px] w-[620px] rounded-full bg-accent-cyan/[0.07] blur-3xl"
+        aria-hidden="true"
+      />
+      <CrosshairMark className="left-6 top-6" />
+      <CrosshairMark className="right-6 top-6" />
+      <CrosshairMark className="bottom-6 left-6" />
+      <CrosshairMark className="bottom-6 right-6" />
+
+      <div className="relative mx-auto max-w-3xl px-6 py-14 md:py-20 text-center">
+        <span className="hero-rise inline-flex items-center gap-2 rounded-full border border-border-default bg-bg-surface/70 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.18em] text-fg-secondary backdrop-blur-sm">
+          <span className="h-1.5 w-1.5 rounded-full bg-signal" aria-hidden="true" />
+          {badge}
+        </span>
+
+        <h1
+          className="hero-rise font-display text-4xl font-bold leading-[1.05] tracking-tight text-fg-primary text-balance md:text-6xl mt-5"
+          style={{ animationDelay: "60ms" }}
+        >
           {subtitle}
         </h1>
-        <p className="mx-auto mt-3 max-w-lg text-sm text-fg-secondary leading-relaxed">{tagline}</p>
-        <div className="mx-auto mt-6 max-w-xl">
-          <div className="relative flex items-center">
-            <Search size={18} className="absolute left-4 text-fg-muted" />
-            <input
-              ref={inputRef}
-              type="text"
-              value={query}
-              onChange={(e) => onQueryChange(e.target.value)}
-              onKeyDown={onKeyDown}
-              placeholder={searchPlaceholder}
-              className="w-full rounded-xl border border-border-default bg-bg-input py-3 pl-11 pr-16 text-sm text-fg-primary placeholder:text-fg-muted outline-none focus:border-accent-cyan/50 focus:shadow-[0_0_0_3px_rgba(6,214,160,0.1)] transition-all"
-              role="combobox"
-              aria-label={searchPlaceholder}
-              aria-expanded={query.trim().length > 0}
-              aria-controls="home-search-results"
-              aria-autocomplete="list"
-            />
-            {query && (
-              <button
-                type="button"
-                onClick={onClear}
-                className="absolute right-14 flex h-6 w-6 items-center justify-center rounded-full text-fg-muted hover:text-fg-primary hover:bg-bg-elevated transition-colors"
-                aria-label={clearLabel}
-              >
-                <X size={14} />
-              </button>
-            )}
-            <kbd className="absolute right-4 hidden sm:inline-flex items-center gap-0.5 rounded border border-border-default bg-bg-elevated px-1.5 py-0.5 text-[10px] font-mono text-fg-muted">
-              ⌘K
-            </kbd>
+        <p
+          className="hero-rise mx-auto mt-4 max-w-md text-base leading-relaxed text-fg-secondary"
+          style={{ animationDelay: "120ms" }}
+        >
+          {tagline}
+        </p>
+
+        <div className="hero-rise mx-auto mt-8 max-w-xl" style={{ animationDelay: "180ms" }}>
+          <div className="group relative">
+            {/* 仪器输入框：四角对位标记 */}
+            <span className="pointer-events-none absolute -left-1 -top-1 h-2.5 w-2.5 border-l border-t border-accent-cyan/40 transition-colors group-focus-within:border-accent-cyan" />
+            <span className="pointer-events-none absolute -right-1 -top-1 h-2.5 w-2.5 border-r border-t border-accent-cyan/40 transition-colors group-focus-within:border-accent-cyan" />
+            <span className="pointer-events-none absolute -bottom-1 -left-1 h-2.5 w-2.5 border-b border-l border-accent-cyan/40 transition-colors group-focus-within:border-accent-cyan" />
+            <span className="pointer-events-none absolute -bottom-1 -right-1 h-2.5 w-2.5 border-b border-r border-accent-cyan/40 transition-colors group-focus-within:border-accent-cyan" />
+            <div className="relative flex items-center">
+              <Search size={18} className="absolute left-4 text-fg-muted" />
+              <input
+                ref={inputRef}
+                type="text"
+                value={query}
+                onChange={(e) => onQueryChange(e.target.value)}
+                onKeyDown={onKeyDown}
+                placeholder={searchPlaceholder}
+                className="w-full rounded-lg border border-border-default bg-bg-surface py-3.5 pl-11 pr-16 text-sm text-fg-primary placeholder:text-fg-muted outline-none transition-all focus:border-accent-cyan/50 focus:shadow-input-focus"
+                role="combobox"
+                aria-label={searchPlaceholder}
+                aria-expanded={query.trim().length > 0}
+                aria-controls="home-search-results"
+                aria-autocomplete="list"
+              />
+              {query && (
+                <button
+                  type="button"
+                  onClick={onClear}
+                  className="absolute right-14 flex h-6 w-6 items-center justify-center rounded-full text-fg-muted hover:text-fg-primary hover:bg-bg-elevated transition-colors"
+                  aria-label={clearLabel}
+                >
+                  <X size={14} />
+                </button>
+              )}
+              <kbd className="absolute right-4 hidden sm:inline-flex items-center gap-0.5 rounded border border-border-default bg-bg-elevated px-1.5 py-0.5 text-[10px] font-mono text-fg-muted">
+                ⌘K
+              </kbd>
+            </div>
           </div>
+        </div>
+
+        {/* 仪表读出条 */}
+        <div
+          className="hero-rise mt-6 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 font-mono text-[11px] uppercase tracking-wider text-fg-muted"
+          style={{ animationDelay: "240ms" }}
+        >
+          {stats.map((stat, i) => (
+            <span key={stat} className="flex items-center gap-3">
+              {i > 0 && <span className="h-3 w-px bg-border-default" aria-hidden="true" />}
+              {stat}
+            </span>
+          ))}
         </div>
       </div>
     </section>
@@ -133,9 +193,11 @@ function QuickAccessSection({
 
   return (
     <section className="pt-10">
-      <div className="flex items-center gap-3 mb-4">
-        <span className="text-sm font-medium text-fg-muted uppercase tracking-wider">{label}</span>
-        <div className="flex-1 h-px bg-border-default" />
+      <div className="flex items-center gap-4 mb-4">
+        <span className="font-mono text-xs font-medium text-fg-muted uppercase tracking-[0.18em] whitespace-nowrap">
+          {label}
+        </span>
+        <div className="ruler-divider flex-1" aria-hidden="true" />
       </div>
       <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
         {tools.map((tool) => {
@@ -226,14 +288,14 @@ function CategorySections({
         if (tools.length === 0) return null;
         return (
           <section key={cat.key}>
-            <div className="flex items-center gap-3 mb-3">
+            <div className="flex items-center gap-4 mb-3">
               <Link
                 href={`${localePrefix}/${CATEGORY_SLUGS[cat.key]}`}
-                className="text-sm font-medium text-fg-muted uppercase tracking-wider hover:text-accent-cyan transition-colors"
+                className="font-mono text-xs font-medium text-fg-muted uppercase tracking-[0.18em] whitespace-nowrap hover:text-accent-cyan transition-colors"
               >
                 {categoryNames[cat.key] ?? cat.key}
               </Link>
-              <div className="flex-1 h-px bg-border-default" />
+              <div className="ruler-divider flex-1" aria-hidden="true" />
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
               {tools.map((tool) => (
@@ -290,12 +352,28 @@ function SearchResults({
               role="option"
               aria-selected={isFocused}
               onClick={() => onToolClick(tool.path, tool.path.slice(1))}
-              className={`rounded-xl border bg-bg-surface p-4 cursor-pointer transition-all duration-200 hover:-translate-y-0.5 hover:shadow-card-hover hover:border-glow ${
+              className={`group relative rounded-lg border bg-bg-surface p-4 cursor-pointer transition-all duration-200 hover:-translate-y-0.5 hover:shadow-card-hover hover:border-glow ${
                 isFocused
                   ? "border-accent-cyan ring-2 ring-accent-cyan/20"
                   : "border-border-default"
               }`}
             >
+              <span
+                className="pointer-events-none absolute left-1.5 top-1.5 h-2 w-2 border-l border-t border-fg-muted/25 transition-colors group-hover:border-accent-cyan"
+                aria-hidden="true"
+              />
+              <span
+                className="pointer-events-none absolute right-1.5 top-1.5 h-2 w-2 border-r border-t border-fg-muted/25 transition-colors group-hover:border-accent-cyan"
+                aria-hidden="true"
+              />
+              <span
+                className="pointer-events-none absolute bottom-1.5 left-1.5 h-2 w-2 border-b border-l border-fg-muted/25 transition-colors group-hover:border-accent-cyan"
+                aria-hidden="true"
+              />
+              <span
+                className="pointer-events-none absolute bottom-1.5 right-1.5 h-2 w-2 border-b border-r border-fg-muted/25 transition-colors group-hover:border-accent-cyan"
+                aria-hidden="true"
+              />
               <div className="flex flex-col items-center">
                 {Icon && (
                   <div
@@ -467,7 +545,9 @@ export default function HomeClient() {
         searchPlaceholder={tHome("searchPlaceholder")}
         subtitle={tHome("subtitle")}
         tagline={tHome("tagline")}
+        badge={tHome("badge")}
         clearLabel={tHome("clearSearch")}
+        stats={[tHome("toolCount"), tHome("whyPrivacyTitle"), tHome("whyOfflineTitle")]}
         inputRef={searchInputRef}
       />
 
@@ -491,7 +571,7 @@ export default function HomeClient() {
 
             <div className="mt-10">
               <div className="flex items-center justify-between mb-4">
-                <span className="text-sm font-medium text-fg-muted uppercase tracking-wider">
+                <span className="font-mono text-xs font-medium text-fg-muted uppercase tracking-[0.18em]">
                   {tHome("allTools")}
                 </span>
                 <ViewModeToggle
@@ -531,18 +611,20 @@ export default function HomeClient() {
       {!isSearching && (
         <>
           <section className="mx-auto mt-16 max-w-4xl text-center">
-            <h2 className="text-lg font-semibold text-fg-primary">{tHome("toolCount")}</h2>
+            <h2 className="font-display text-2xl font-bold tracking-tight text-fg-primary">
+              {tHome("toolCount")}
+            </h2>
             <p className="mt-3 text-sm leading-relaxed text-fg-secondary">
               {tHome("brandDescription")}
             </p>
           </section>
 
           <section className="mx-auto mt-16 max-w-4xl">
-            <h2 className="text-center text-lg font-semibold text-fg-primary mb-8">
+            <h2 className="text-center font-display text-2xl font-bold tracking-tight text-fg-primary mb-8">
               {tHome("whyTitle")}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div className="rounded-xl border border-border-default bg-bg-surface p-6 text-center">
+              <div className="rounded-lg border border-border-default bg-bg-surface p-6 text-center shadow-card">
                 <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-accent-cyan/10">
                   <Shield size={20} className="text-accent-cyan" />
                 </div>
@@ -553,7 +635,7 @@ export default function HomeClient() {
                   {tHome("whyPrivacyDesc")}
                 </p>
               </div>
-              <div className="rounded-xl border border-border-default bg-bg-surface p-6 text-center">
+              <div className="rounded-lg border border-border-default bg-bg-surface p-6 text-center shadow-card">
                 <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-accent-cyan/10">
                   <Wifi size={20} className="text-accent-cyan" />
                 </div>
@@ -564,7 +646,7 @@ export default function HomeClient() {
                   {tHome("whyOfflineDesc")}
                 </p>
               </div>
-              <div className="rounded-xl border border-border-default bg-bg-surface p-6 text-center">
+              <div className="rounded-lg border border-border-default bg-bg-surface p-6 text-center shadow-card">
                 <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-accent-cyan/10">
                   <Heart size={20} className="text-accent-cyan" />
                 </div>
@@ -577,7 +659,7 @@ export default function HomeClient() {
           </section>
 
           <section className="mx-auto mt-16 max-w-4xl">
-            <h2 className="text-center text-lg font-semibold text-fg-primary mb-8">
+            <h2 className="text-center font-display text-2xl font-bold tracking-tight text-fg-primary mb-8">
               {tHome("categoryIntroTitle")}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -592,7 +674,7 @@ export default function HomeClient() {
                 return (
                   <div
                     key={cat.key}
-                    className="rounded-xl border border-border-default bg-bg-surface p-5"
+                    className="rounded-lg border border-border-default bg-bg-surface p-5 shadow-card"
                   >
                     <h3 className="text-sm font-semibold text-fg-primary">
                       {categoryNames[cat.key] ?? cat.key}

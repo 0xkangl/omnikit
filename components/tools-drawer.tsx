@@ -25,9 +25,11 @@ interface ToolsDrawerProps {
 
 function SectionHeader({ label }: { label: string }) {
   return (
-    <div className="flex items-center gap-3 px-3 py-2">
-      <span className="text-xs font-medium text-fg-muted uppercase tracking-wider">{label}</span>
-      <div className="flex-1 h-px bg-border-default" />
+    <div className="flex items-center gap-4 px-3 py-2">
+      <span className="font-mono text-xs font-medium text-fg-muted uppercase tracking-[0.18em] whitespace-nowrap">
+        {label}
+      </span>
+      <div className="ruler-divider flex-1" aria-hidden="true" />
     </div>
   );
 }

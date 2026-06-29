@@ -35,7 +35,7 @@ export default function CategoryPage({ categoryKey }: { categoryKey: ToolCategor
   return (
     <Layout headerPosition="sticky">
       <section className="container mx-auto px-4 pt-6 pb-20">
-        <h1 className="text-2xl md:text-3xl font-mono font-bold text-fg-primary tracking-tight">
+        <h1 className="font-display text-3xl md:text-4xl font-bold text-fg-primary tracking-tight">
           {tc(`${categoryKey}.shortTitle`)}
         </h1>
 

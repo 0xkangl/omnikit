@@ -98,7 +98,9 @@ export default function Header({
               className="flex shrink-0 items-center gap-2 text-fg-primary hover:text-accent-cyan transition-colors"
             >
               <img src="/favicon.svg" alt="Logo" height={28} width={28} />
-              <span className="text-sm font-bold hidden md:inline">{t("nav.brand")}</span>
+              <span className="font-display text-base font-bold tracking-tight hidden md:inline">
+                {t("nav.brand")}
+              </span>
             </Link>
 
             {categoryLabel && categorySlug && (
