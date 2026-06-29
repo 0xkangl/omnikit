@@ -38,3 +38,7 @@ next-env.d.ts
 .worktrees
 .superpowers/
 .playwright-mcp/
+
+# agent skills (local tooling, not version-controlled)
+.claude/skills/
+.agents/skills/
